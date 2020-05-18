@@ -1,4 +1,4 @@
-Ayou: actuellement en train de rien faire
+Ayou:page partiel/ds/qcm
 
 Sansan:header et footer
 
