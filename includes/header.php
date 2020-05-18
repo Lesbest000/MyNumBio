@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <title>MyNumBio</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.css">
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="Style.css">
   </head>
   <body>
   <header class="header-global">
