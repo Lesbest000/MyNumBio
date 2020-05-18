@@ -1,7 +1,7 @@
-Ayou:page partiel/ds/qcm
+Ayou:page partiel/ds/qcm et essaye de faire la navigation matière
 
 Sansan:header et footer
 
-Eloi:
+Eloi:page accueil cnb
 
-Maoui:
+Maoui:page connexion
