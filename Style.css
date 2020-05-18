@@ -3,10 +3,11 @@ background-color: rgba(39, 172, 182, 0.6);
 color: black;
 border-left: none;
 border-radius:5px;
-width: 50px;
+width: 150px;
 height: 100px;
 text-align: center justify;
 justify-content: center;
+text-decoration: none;
 }
 
 h1{
@@ -20,6 +21,7 @@ background-color: rgba(41, 149, 211, 0.6);
 color: white;
 border-left: none;
 border-radius:5px;
+text-decoration: none;
 }
 
 .bloc_gauche:hover{
@@ -50,6 +52,7 @@ a:hover{
     margin: 5px;
     color:black;
     text-align: center justify;
+    text-decoration: none;
 }
 
 .bloc_type_épreuve:hover{
