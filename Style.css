@@ -1,14 +1,19 @@
 .bloc_gauche{
-background-color: rgb(41, 200, 211,0.6);
+background-color: rgba(39, 172, 182, 0.6);
 color: black;
 border-left: none;
 border-radius:5px;
-width: 200px;
+width: 50px;
 height: 100px;
-text-align: justify;
+text-align: center justify;
 justify-content: center;
 }
 
+h1{
+color: black;
+text-decoration: underline;
+
+}
 .bloc_gauche_actuel{
 background-color: rgba(41, 149, 211, 0.6);
 color: white;
@@ -43,7 +48,7 @@ a:hover{
 .bloc_type_épreuve{
     margin: 5px;
     color:black;
-    text-align: justify;
+    text-align: center justify;
 }
 
 .bloc_type_épreuve:hover{
