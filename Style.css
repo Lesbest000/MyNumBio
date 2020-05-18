@@ -3,6 +3,10 @@ background-color: rgb(41, 200, 211,0.6);
 color: black;
 border-left: none;
 border-radius:5px;
+width: 200px;
+height: 100px;
+text-align: justify;
+justify-content: center;
 }
 
 .bloc_gauche_actuel{
