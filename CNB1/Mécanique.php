@@ -3,11 +3,11 @@
     <head>
         <meta charset="utf-8" />
         <link rel="stylesheet" href="Style.css" />
-        <title>Page CNB1</title>
+        <title>Mécanique CNB1</title>
     </head>
 
     <body>
-        <h1>Epreuves CNB1</h1>
+        <h1>Mécanique CNB1</h1>
         
         <div class="contener_gauche">
             <div class="bloc_gauche"><a href="Mathématiques.php">Mathématiques</a></div>

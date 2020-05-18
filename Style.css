@@ -1,0 +1,35 @@
+.bloc_gauche{
+background-color: rgb(41, 200, 211,0.6);
+color: black;
+border-left: none;
+border-radius:5px;
+
+}
+
+.bloc_gauche:hover{
+background-color: blueviolet;
+color:white;
+}
+
+a:hover{
+    text-decoration: underline;
+}
+
+.contener_gauche{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+
+}
+
+.contener_type_épreuve{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.bloc_type_épreuve{
+    
+}
