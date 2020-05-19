@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="fr">
     <head>
@@ -30,9 +31,11 @@
                     <p>&thinsp;</p>
                     <button type="submit" name="submit" class="submit-btn">S'inscrire</button>
             </form>
+
             </div>
 
     </div>
+
         <script>
             var x= document.getElementById("connexion");
             var y= document.getElementById("inscription");

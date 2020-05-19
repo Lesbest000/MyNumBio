@@ -1,34 +1,31 @@
 <?php
+$password_1=$_POST['password_1'];
+$password_2=$_POST['password_2'];
+//bdd
 
-/*** mysql hostname ***/
-$db_hostname = '10.9.113.16';
+$host = 'devisenfdhmycnb.mysql.db';
+$user = 'devisenfdhmycnb';
+$pass = '1920MyNumBio';
+$db = 'devisenfdhmycnb';
+$link = mysqli_connect ($host,$user,$pass) or die ('Erreur : '.mysqli_error() );
+mysqli_select_db($db) or die ('Erreur :'.mysqli_error());
 
-/*** mysql username ***/
-$db_username = 'devisenfdhmycnb';
+$password_1=$_POST['password_1'];
+$password_2=$_POST['password_2'];
 
-/*** mysql password ***/
-$db_password = '1920MyNumBio';
-
-$db_name = "devisenfdhmycnb";
-
-$conn = mysqli_connect($db_hostname,$db_username,$db_password, 'any_database');
-
-
-
-
-if($password_1 != $password_2){
-    array_push($error,"Les deux mots de passe sont différents");
+if($password_2==$password_2){
+   echo $password_2;
 }
+$email = $_POST['email'];
+$password = $_POST['password_1'];
+$password=md5($password_1);
+$email = mb_strtolower($email);
 
-if(isset($_POST['submit'])){
-    $email= mysql_real_escape_strings($_POST['email']);
-    $password= mysql_real_escape_strings($_POST['password']);
-}
-
-if(count($error)==0){
-    $password=md5($password_1);
-    $sql="INSERT INTO inscription (email, password) VALUES ('$email','$password')";
-    mysqli_query($con,$sql);
-}
-
+$sql="INSERT INTO utilisateur(email, password) VALUES ('$email','$password')";
+if($sql==false){
+   echo"fail";
+}else{
+   echo"Vous avez été inscrit";
+   header("");
+   }
 ?>
