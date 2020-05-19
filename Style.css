@@ -2,7 +2,6 @@
     display: block ;
     background: rgb(92, 46, 4) ;
     color: #fff ;
-    font: 1em "Trebuchet MS",Arial,sans-serif ;
     line-height: 1em ;
     text-align: center ;
     text-decoration: none;
@@ -11,7 +10,7 @@
     text-align: center;
     padding: 12px 10px;
     width: 100%;
-  }
+}
 
 
 .bloc_gauche{
@@ -45,8 +44,13 @@ background-color: blueviolet;
 color:white;
 }
 
-a:hover{
+a:hover {
     text-decoration: underline;
+}
+
+nav a :hover {
+    text-decoration: underline;
+    color: white;
 }
 
 .contener_gauche{
@@ -75,3 +79,9 @@ a:hover{
     color:blue;
 }
 
+footer{
+    text-align: center;
+    background-color: black;
+    color: white;
+    line-height: 2;
+  }
