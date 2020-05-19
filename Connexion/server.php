@@ -6,7 +6,7 @@ if($password_1 != $password_2){
 }
 
 if(isset($_POST['submit'])){
-    $email= mysql_real_escape_strings($_POST['email'])
+    $email= mysql_real_escape_strings($_POST['email']);
     $password= mysql_real_escape_strings($_POST['password']);
 }
 
