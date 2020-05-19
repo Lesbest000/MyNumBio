@@ -7,7 +7,6 @@
 .fond-accueil{
 height:100%;
 width: 100%;
-background-image:linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)),url('img/montagne.jpg');
 background-position: center;
 background-size: cover;
 position: absolute;
@@ -15,14 +14,17 @@ position: absolute;
 
 h1{
     font-size: 4em;
-    color:#e64b24;
+    color:#f8f8f8;
     font-family: impact, fantasy;
     text-align: center;
+    text-decoration: underline;
+    text-shadow: #0d67ce 2px 5px;
 }
+
 
 body{
     padding-top: 3%;
-    background-color: black;
+    background-image:url('ADN3.jpg');
 }
 
 .formulaire-box{
@@ -40,7 +42,7 @@ box-shadow: 10px 10px 4px #808080;
     width: 260px;
     margin:35px auto;
     position:relative;
-    box-shadow:0 0 20px 9px lightsalmon;
+    box-shadow:0 0 20px 9px #91a9b1;
     border-radius: 30px;
 
 }
@@ -60,7 +62,7 @@ box-shadow: 10px 10px 4px #808080;
     position:absolute;
     width: 130px;
     height:100%;
-    background:linear-gradient(to right,#ff105f,#ffad06);
+    background:linear-gradient(to right,#0da1ce,#c7d8df);
     border-radius: 30px;
     transition:.5s;
 }
@@ -90,7 +92,7 @@ box-shadow: 10px 10px 4px #808080;
     cursor: pointer;
     display: block;
     margin: auto;
-    background: linear-gradient(to right,#ff105f,#ffad06);
+    background: linear-gradient(to right,#0da1ce,#c7d8df);
     border: 0;
     outline:none;
     border-radius: 30px;
