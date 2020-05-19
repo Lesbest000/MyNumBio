@@ -10,8 +10,8 @@
   <header class="header-global">
   <a href="Accueil.php"><img src="img/zovana3.png" class="logo" alt=""></a> <hr>
     <nav id="barre-centrale">  
-      <a href="Accueil.php">Accueil</a>
-      <a href="cnb1.php">CNB1</a>
+      <a href="Accueil.php">ACCUEIL</a>
+      <a href="Page_CNB1.php">CNB1</a>
       <a href="cnb2.php">CNB2</a>
       <a href="cnb3.php">CNB3</a>
     </nav>

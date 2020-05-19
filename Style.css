@@ -1,7 +1,7 @@
-#barre-centrale  {
+#barre-centrale a{
     display: block ;
-    background: rgb(92, 46, 4) ;
-    color: #fff ;
+    background: orangered ;
+    color: white ;
     line-height: 1em ;
     text-align: center ;
     text-decoration: none;
@@ -12,7 +12,24 @@
     width: 100%;
 }
 
+#barre-centrale a:hover, #barre-centrale a:active, #barre-centrale a:focus{
+    color: white;
+    text-decoration: underline;
+}
 
+.isen{
+    width: 300px;
+    height:100px;
+    display: flex;
+    justify-content: center;
+}
+
+.atrium{
+    width: 500px;
+    height: 300px;
+    display: flex;
+    justify-content: center;
+}
 .bloc_gauche{
 background-color: rgba(39, 172, 182, 0.6);
 color: black;
@@ -48,9 +65,23 @@ a:hover {
     text-decoration: underline;
 }
 
-nav a :hover {
-    text-decoration: underline;
+#barre-centrale  {
+    display: block ;
+    background: orangered ;
+    color: white ;
+    line-height: 1em ;
+    text-align: center ;
+    text-decoration: none;
+    display: flex;
+    justify-content: space-around;
+    text-align: center;
+    padding: 12px 10px;
+    width: 100%;
+}
+
+#barre-centrale:hover, #barre-centrale:active, #barre-centrale:focus{
     color: white;
+    text-decoration: underline;
 }
 
 .contener_gauche{
@@ -79,9 +110,18 @@ nav a :hover {
     color:blue;
 }
 
+.top a{
+    color:black;
+    text-decoration: none;
+}
+
+.top a :hover,.top a :focus,.top a :active {
+    text-decoration: underline;
+
+}
 footer{
     text-align: center;
     background-color: black;
     color: white;
     line-height: 2;
-  }
+}
