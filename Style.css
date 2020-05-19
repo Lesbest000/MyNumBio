@@ -12,6 +12,11 @@
     width: 100%;
 }
 
+.titre{
+color:white;
+text-shadow: 2px 2px 3px black;
+}
+
 #barre-centrale a:hover, #barre-centrale a:active, #barre-centrale a:focus{
     color: white;
     text-decoration: underline;
@@ -31,17 +36,21 @@
     justify-content: center;
 }
 .bloc_gauche{
-background-color: rgba(39, 172, 182, 0.6);
+background-image: radial-gradient(circle at center,rgba(30, 237, 252, 0.7), rgba(0, 140, 255, 0.8));
 color: black;
 border-left: none;
-border-radius:5px;
-width: 150px;
-height: 100px;
-text-align: center justify;
+border-radius:15px;
 justify-content: center;
 text-decoration: none;
+padding: 10px;
+margin: 5px;
+font-size: 130%;
+box-shadow: 5px 5px 5px black;
+}   
+.bloc_gauche a{
+text-align: justify;
+text-decoration: none;
 }
-
 h1{
 color: black;
 text-decoration: underline;
@@ -49,16 +58,26 @@ text-align: center;
 
 }
 .bloc_gauche_actuel{
-background-color: rgba(41, 149, 211, 0.6);
+background-image: radial-gradient(circle at center,rgba(30, 252, 196, 0.7), rgba(0, 247, 255, 0.8));
 color: white;
 border-left: none;
-border-radius:5px;
+border-radius:15px;
+margin: 5px;
+font-size: 140%;
+padding: 10px;
+}
+.bloc_gauche_actuel a{
+text-align: justify;
 text-decoration: none;
+color: white;
+}
+.bloc_gauche:hover{
+background-image: radial-gradient(circle at center,rgba(30, 126, 252, 0.7), rgba(119, 0, 255, 0.8));
+font-size: 140%;
 }
 
-.bloc_gauche:hover{
-background-color: blueviolet;
-color:white;
+.bloc_gauche:hover a{
+    color:white;
 }
 
 a:hover {
@@ -87,9 +106,8 @@ a:hover {
 .contener_gauche{
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: space-around;
     align-items: flex-start;
-
 }
 
 .contener_type_épreuve{
@@ -124,4 +142,18 @@ footer{
     background-color: black;
     color: white;
     line-height: 2;
+}
+
+body
+{
+    background-image: url("Fond2.jpg");
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+}
+
+.contener_centre_matières{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
 }
