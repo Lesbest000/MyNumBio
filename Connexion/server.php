@@ -1,31 +1,21 @@
 <?php
 
 /*** mysql hostname ***/
-$hostname = 'localhost';
+$db_hostname = '10.9.113.16';
 
 /*** mysql username ***/
-$username = 'username';
+$db_username = 'devisenfdhmycnb';
 
 /*** mysql password ***/
-$password = 'password';
+$db_password = '1920MyNumBio';
 
-try {
-    $dbh = new PDO("mysql:host=$hostname;dbname=mysql", $username, $password);
-    /*** echo a message saying we have connected ***/
-    echo 'Connected to database';
-    }
+$db_name = "devisenfdhmycnb";
+
+$conn = mysqli_connect($db_hostname,$db_username,$db_password, 'any_database');
 
 
 
-$con=mysqli_connect(host,username,password,dbname); 
 
-// Check connection
-if (mysqli_connect_errno())
-  {
-  echo "Failed to connect to MySQL: " . mysqli_connect_error();
-  }
-
-//
 if($password_1 != $password_2){
     array_push($error,"Les deux mots de passe sont différents");
 }
