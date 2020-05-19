@@ -8,7 +8,7 @@
         <link rel="stylesheet" href="style.css">
     </head>
     <body>
-        <h1>MyNumBio</h1>
+    <h1>MyNumBio</h1>
     <div class="fond-accueil">
         <div class="formulaire-box">
             <div class="button-box">
