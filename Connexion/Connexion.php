@@ -5,7 +5,7 @@
         <title>Connexion</title>
         <meta name="viewport" content="width=device-width, user-scalable=no">
         <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Open+Sans">
-        <link rel="stylesheet" href="css/style.css">
+        <link rel="stylesheet" href="style.css">
     </head>
     <body>
         <h1>MyNumBio</h1>
