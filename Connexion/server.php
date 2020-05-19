@@ -3,12 +3,12 @@ $password_1=$_POST['password_1'];
 $password_2=$_POST['password_2'];
 //bdd
 
-$host = 'devisenfdhmycnb.mysql.db';
-$user = 'devisenfdhmycnb';
-$pass = '1920MyNumBio';
-$db = 'devisenfdhmycnb';
-$link = mysqli_connect ($host,$user,$pass) or die ('Erreur : '.mysqli_error() );
-mysqli_select_db($db) or die ('Erreur :'.mysqli_error());
+$db_host = 'devisenfdhmycnb.mysql.db';
+$db_user = 'devisenfdhmycnb';
+$db_pass = '1920MyNumBio';
+$db_name = 'devisenfdhmycnb';
+$link = mysqli_connect ($db_host,$db_user,$db_pass) or die ('Erreur : '.mysqli_error() );
+mysqli_select_db($db_name) or die ('Erreur :'.mysqli_error());
 
 $password_1=$_POST['password_1'];
 $password_2=$_POST['password_2'];
