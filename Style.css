@@ -1,3 +1,19 @@
+#barre-centrale  {
+    display: block ;
+    background: rgb(92, 46, 4) ;
+    color: #fff ;
+    font: 1em "Trebuchet MS",Arial,sans-serif ;
+    line-height: 1em ;
+    text-align: center ;
+    text-decoration: none;
+    display: flex;
+    justify-content: space-around;
+    text-align: center;
+    padding: 12px 10px;
+    width: 100%;
+  }
+
+
 .bloc_gauche{
 background-color: rgba(39, 172, 182, 0.6);
 color: black;
