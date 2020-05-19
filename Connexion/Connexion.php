@@ -22,7 +22,7 @@
             <input type="checkbox" class="checkbox"><span>Se souvenir de moi</span>
             <button type="submit" class="submit-btn">Se Connecter</button>
             </form>
-            <form id="inscription" class="input-group">
+            <form action="server.php" method="POST" id="inscription" class="input-group">
                     <input type="email" id="email" name="email" class="input-field" placeholder="Adresse mail" pattern="[A-Za-z0-9]{1,20}[.][A-Za-z0-9]{1,20}@student.yncrea.fr" title="Type d'adresse mail à fournir : prénom.nom@student.yncrea.fr" required>
                     <input type="password" id="password" name="password_1" class="input-field" placeholder="Mot de passe" required>
                     <input type="password" id="password" name="password_2" class="input-field" placeholder="Confirmer le mot de passe" required>
