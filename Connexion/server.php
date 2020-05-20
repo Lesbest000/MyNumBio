@@ -8,12 +8,12 @@ $db_user = 'devisenfdhmycnb';
 $db_pass = '1920MyNumBio';
 $db_name = 'devisenfdhmycnb';
 $link = mysqli_connect ($db_host,$db_user,$db_pass) or die ('Erreur : '.mysqli_error() );
-mysqli_select_db($db_name) or die ('Erreur :'.mysqli_error());
+mysqli_select_db($db) or die ('Erreur :'.mysqli_error());
 
 $password_1=$_POST['password_1'];
 $password_2=$_POST['password_2'];
 
-if($password_2==$password_2){
+if($password_1==$password_2){
    echo $password_2;
 }
 $email = $_POST['email'];
