@@ -45,6 +45,9 @@ if(mysqli_num_rows($res_e) > 0){
  }else{
 $sql="INSERT INTO `utilisateur`(`email`, `password`) VALUES('$email', '$password')";  
 $inscription=mysqli_query($link,$sql);
+echo "Vous êtes maintenant inscrit";
+header("Location: http://".$_SERVER['HTTP_HOST'].'/Github/MyNumBio/MyNumBio/Accueil.php');
+ }
 
 if ( $inscription == FALSE )
  {
@@ -52,7 +55,7 @@ if ( $inscription == FALSE )
  echo mysqli_errno($link) . ": " . mysqli_error($link). "\n";
  die();
  }
- }
+ 
 
 // Connection close  
 mysqli_close($link); 
