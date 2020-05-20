@@ -8,23 +8,6 @@ $password = $_POST['password_1'];
 $email = mb_strtolower($email);
 $password=md5($password_1);
 
-//Connexion a la bdd
-
-$db_host = "127.0.0.1";
-$db_user = "root";
-$db_pass = "";
-$db_name = "test";
-$db_table="utilisateur";
-$link = mysqli_connect ($db_host,$db_user,$db_pass,$db_name);
-
-////////////////////////////////////////////////////////////////////////////////////////////////////////
-//Si erreur de connexion
-
-if($link==false){
-   echo"Erreur de connexion:".mysqli_connect_erno();
-   die();
-}
-
 //Voir si les deux codes sont les mêmes
 
 if($password_1!=$password_2){
@@ -32,6 +15,25 @@ if($password_1!=$password_2){
    location='Connexion.php'</script>";
    die();
 }
+//Connexion a la bdd
+
+$db_host = "127.0.0.1";
+$db_user = "root";
+$db_pass = "";
+$db_name = "test";
+$db_table="utilisateur";
+
+$link = mysqli_connect ($db_host,$db_user,$db_pass,$db_name);
+
+////////////////////////////////////////////////////////////////////////////////////////////////////////
+//Si erreur de connexion
+
+if($link==false){
+   echo"<b>Erreur de connexion à la base de données:</b>";
+   echo mysqli_erno($link);
+   die();
+}
+
 
 
 //Voir si mail existant sinon Inserer dans bdd
@@ -46,8 +48,6 @@ if(mysqli_num_rows($res_e) > 0){
  }else{
 $sql="INSERT INTO `utilisateur`(`email`, `password`) VALUES('$email', '$password')";  
 $inscription=mysqli_query($link,$sql);
-
-
  }
 
 
