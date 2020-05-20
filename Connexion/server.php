@@ -28,7 +28,7 @@ if($link==false){
 
 
 if($password_1!=$password_2){
-   echo "Vos deux mots de passe ne sont pas les mêmes.</br>";
+   echo "Veuillez saisir le même mot de passe.</br>";
    die();
 }
 
@@ -40,7 +40,7 @@ $res_e = mysqli_query($link,$sql_e);
 
 
 if(mysqli_num_rows($res_e) > 0){
-   echo "Cette adresse mail est utilisée"; 
+   echo "Cette adresse mail est déjà utilisée"; 
    die();	
  }else{
 $sql="INSERT INTO `utilisateur`(`email`, `password`) VALUES('$email', '$password')";  
