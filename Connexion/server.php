@@ -15,6 +15,7 @@ if($password_1!=$password_2){
    location='Connexion.php'</script>";
    die();
 }
+
 //Connexion a la bdd
 
 $db_host = "127.0.0.1";
@@ -37,23 +38,23 @@ if($link==false){
 
 
 //Voir si mail existant sinon Inserer dans bdd
-$sql_e = "SELECT * FROM `utilisateur` WHERE email='$email'";
+$sql_e = "SELECT * FROM `$db_table` WHERE email='$email'";
 $res_e = mysqli_query($link,$sql_e);
 
 
 if(mysqli_num_rows($res_e) > 0){
-   echo "<script type='text/javascript'>alert('Cette adresse mail est déjà utilisée');
+   echo "<script type='text/javascript'>alert('Cette adresse mail est déjà utilisée.');
    location='Connexion.php'</script>";
    die();	
  }else{
-$sql="INSERT INTO `utilisateur`(`email`, `password`) VALUES('$email', '$password')";  
+$sql="INSERT INTO `$db_table`(`email`, `password`) VALUES('$email', '$password')";  
 $inscription=mysqli_query($link,$sql);
  }
 
 
 if ( $inscription == FALSE )
  {
- echo "<p>Erreur d'inscription. Vous n'avez pas pu vous inscrire</p>" ;
+ echo "<p>Erreur d'inscription. Vous n'avez pas pu vous inscrire.</p>" ;
  echo mysqli_errno($link) . ": " . mysqli_error($link). "\n";
  die();
  }
@@ -64,6 +65,6 @@ mysqli_close($link);
 ?>
 
 <script type="text/javascript">
-alert("Vous êtes maintenant inscrit");
+alert("Vous êtes maintenant inscrit !");
 window.location.assign("../Accueil.php");
 </script>
