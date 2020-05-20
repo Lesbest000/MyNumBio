@@ -1,6 +1,4 @@
 <?php
-
-
 //Va chercher valeurs dans le form
 $password_1=$_POST['password_1'];
 $password_2=$_POST['password_2'];
@@ -9,6 +7,7 @@ $email = $_POST['email'];
 $password = $_POST['password_1'];
 $email = mb_strtolower($email);
 $password=md5($password_1);
+
 //Connexion a la bdd
 
 $db_host = "127.0.0.1";
@@ -26,21 +25,23 @@ if($link==false){
    die();
 }
 
+//Voir si les deux codes sont les mêmes
 
 if($password_1!=$password_2){
-   echo "Veuillez saisir le même mot de passe.</br>";
+   echo "<script type='text/javascript'>alert('Veuillez saisir le même mot de passe.');
+   location='Connexion.php'</script>";
    die();
 }
 
 
-
-//Inserer dans bdd
+//Voir si mail existant sinon Inserer dans bdd
 $sql_e = "SELECT * FROM `utilisateur` WHERE email='$email'";
 $res_e = mysqli_query($link,$sql_e);
 
 
 if(mysqli_num_rows($res_e) > 0){
-   echo "Cette adresse mail est déjà utilisée"; 
+   echo "<script type='text/javascript'>alert('Cette adresse mail est déjà utilisée');
+   location='Connexion.php'</script>";
    die();	
  }else{
 $sql="INSERT INTO `utilisateur`(`email`, `password`) VALUES('$email', '$password')";  
@@ -61,6 +62,7 @@ if ( $inscription == FALSE )
 // Connection close  
 mysqli_close($link); 
 ?>
+
 <script type="text/javascript">
 alert("Vous êtes maintenant inscrit");
 window.location.assign("../Accueil.php");
