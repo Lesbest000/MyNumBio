@@ -3,6 +3,12 @@
 $password_1=$_POST['password_1'];
 $password_2=$_POST['password_2'];
 
+if($password_1!=$password_2){
+   echo "<script type='text/javascript'>alert('Veuillez saisir le même mot de passe.');
+   location='Connexion.php'</script>";
+   die();
+}
+
 $email = $_POST['email'];
 $password = $_POST['password_1'];
 $email = mb_strtolower($email);
@@ -10,11 +16,7 @@ $password=md5($password_1);
 
 //Voir si les deux codes sont les mêmes
 
-if($password_1!=$password_2){
-   echo "<script type='text/javascript'>alert('Veuillez saisir le même mot de passe.');
-   location='Connexion.php'</script>";
-   die();
-}
+
 
 //Connexion a la bdd
 
@@ -39,10 +41,10 @@ if($link==false){
 
 //Voir si mail existant sinon Inserer dans bdd
 $sql_e = "SELECT * FROM `$db_table` WHERE email='$email'";
-$res_e = mysqli_query($link,$sql_e);
+$req_e = mysqli_query($link,$sql_e);
 
 
-if(mysqli_num_rows($res_e) > 0){
+if(mysqli_num_rows($req_e) > 0){
    echo "<script type='text/javascript'>alert('Cette adresse mail est déjà utilisée.');
    location='Connexion.php'</script>";
    die();	
