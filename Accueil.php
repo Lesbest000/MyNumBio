@@ -89,9 +89,20 @@
             <script language="javascript">
                 StartAnim();
             </script>
-        </div>-->
-        <marquee behavior=scroll onMouseover="this.stop()" OnMouseout="this.start()" direction="left" scrolldelay="40" width="500" heidt='300'>
+        </div>
+        <div class="centre">
+        <marquee behavior=scroll onMouseover="this.stop()" OnMouseout="this.start()" direction="left" scrolldelay="40" width="600" heidt='300'>
         <img src="img/atrium.jpg" /></marquee>
+        <marquee behavior=scroll onMouseover="this.stop()" OnMouseout="this.start()" direction="left" scrolldelay="40" width="600" heidt='300'>
+        <img src="img/NumBio.jpg" /></marquee>-->
+        <marquee align="center" height="200" scrollamount="15">
+        <p>
+        <img border="0" src="img/isen.jpg" width="400" height="200" alt="erreur d'image" hspace="0">
+        <img border="0" src="img/atrium.jpg" width="300" height="200" alt="erreur d'image" hspace="0">
+        <img border="0" src="img/NumBio.jpg" width="450" height="200" alt="erreur d'image" hspace="0">
+        <img border="0" src="img/plaquette_isen.jpg" width="400" height="200" alt="erreur d'image" hspace="0">
+        </p></marquee>
+        </div>
     </body>
 
     <?php include("includes/footer.php")?>
