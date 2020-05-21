@@ -170,7 +170,7 @@ body
     background-repeat: no-repeat;
 }
 
-.contener_centre_matières{
+.contener_centre_matières {
     display: flex;
     flex-direction: column;
     justify-content: space-around;
