@@ -47,16 +47,18 @@ margin: 5px;
 font-size: 130%;
 box-shadow: 5px 5px 5px black;
 }   
+
 .bloc_gauche a{
 text-align: justify;
 text-decoration: none;
 }
+
 h1{
 color: black;
 text-decoration: underline;
 text-align: center;
-
 }
+
 .bloc_gauche_actuel{
 background-image: radial-gradient(circle at center,rgba(30, 252, 196, 0.7), rgba(0, 247, 255, 0.8));
 color: white;
@@ -66,11 +68,13 @@ margin: 5px;
 font-size: 140%;
 padding: 10px;
 }
+
 .bloc_gauche_actuel a{
 text-align: justify;
 text-decoration: none;
 color: white;
 }
+
 .bloc_gauche:hover{
 background-image: radial-gradient(circle at center,rgba(30, 126, 252, 0.7), rgba(119, 0, 255, 0.8));
 font-size: 140%;
@@ -145,7 +149,7 @@ footer{
 
 body
 {
-    background-image: url("Fond2.jpg");
+    background-image: url("Bois1.jpg");
     background-attachment: fixed;
     background-repeat: no-repeat;
 }
