@@ -18,9 +18,9 @@
             <div class="bloc_gauche"><a href="Chimie_CNB1.php">Chimie</a></div>
         </div>
         <div class="contener_type_épreuve">
-            <div class="bloc_type_épreuve"><a href="Mathématiques_CNB1/Quizz_Mathématiques_CNB1.php">Quizz</a></div>
-            <div class="bloc_type_épreuve"><a href="Mathématiques_CNB1/DS_Mathématiques_CNB1.php">DS</a></div>
-            <div class="bloc_type_épreuve"><a href="Mathématiques_CNB1/Partiel_Mathématiques_CNB1.php">Partiel</a></div>
+            <div class="bloc_type_épreuve"><a href="Quizz_Mathématiques_CNB1.php">Quizz</a></div>
+            <div class="bloc_type_épreuve"><a href="DS_Mathématiques_CNB1.php">DS</a></div>
+            <div class="bloc_type_épreuve"><a href="Partiel_Mathématiques_CNB1.php">Partiel</a></div>
         </div>
     </body>
     <?php include("../includes/footer.php")?>
