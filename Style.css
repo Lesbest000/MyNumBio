@@ -1,6 +1,6 @@
 #barre-centrale a{
     display: block ;
-    background: orangered ;
+    background:linear-gradient(to right,#0da1ce,#c7d8df);
     color: white ;
     line-height: 1em ;
     text-align: center ;
