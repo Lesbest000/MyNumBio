@@ -1,14 +1,14 @@
 <?php
 
-// Inialize session
+// Initialiser session
 session_start();
 
-// Delete certain session
-unset($_SESSION['email']);
-// Delete all session variables
-// session_destroy();
 
-// Jump to login page
+unset($_SESSION['email']);
+
+session_destroy();
+
+// Retour sur la page de connexion
 echo "<script> location='Connexion.php'</script>";
 
 
