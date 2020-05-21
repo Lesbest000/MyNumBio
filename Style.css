@@ -176,3 +176,22 @@ body
     justify-content: space-around;
     align-items: center;
 }
+
+.slideshow {
+    width: 300px;
+    height: 300px;
+    overflow: hidden;
+    border: 3px solid #F2F2F2; 
+  }
+  
+  .slideshow ul {
+     /* 4 images donc 4 x 100% */
+    width: 300%;
+    height: 300px;
+    padding:0; margin:0;
+    list-style: none;
+  }
+  
+  .slideshow li {
+    float: left;
+  }
