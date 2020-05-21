@@ -1,5 +1,7 @@
 <?php include("includes/header.php")?>
 
+<p>Bonjour et bienvenue à tous!</p>
+
 <div class="slideshow">
 
     <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.5.1/jquery.min.js"></script>
