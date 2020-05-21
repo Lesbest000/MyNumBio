@@ -165,8 +165,7 @@ body
     width: 300px;
     height: 300px;
     overflow: hidden;
-    border: 3px solid #F2F2F2;
-    position: center;
+    border: 3px solid #F2F2F2; 
   }
   
   .slideshow ul {
