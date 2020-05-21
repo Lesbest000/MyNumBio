@@ -39,11 +39,17 @@ $row=mysqli_fetch_array($result);
 
 if($row['email']== $email && $row['password'] == $password){
   
-   echo "<script type='text/javascript'>alert('Vous êtes maintenant connecté en tant que $email');
-   window.location.assign('../Accueil.php')</script>";
-
+   $_SESSION['email'] = $_POST['email'];
    session_start();
 
+// Check, if username session is NOT set then this page will jump to login page
+if (!isset($_SESSION['email'])) {
+   echo "<script type='text/javascript'>alert('Vous êtes maintenant connecté en tant que $email');
+   window.location.assign('../Accueil.php')</script>";
+}
+   
+   
+     
 }else{
    echo "<script type='text/javascript'>alert('Adresse mail ou mot de passe incorrect.');
    location='Connexion.php'</script>";

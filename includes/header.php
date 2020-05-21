@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="Style.css">
   </head>
   <body>
+  <a href="Connexion/deconnexion.php">Se déconnecter</a>
   <header class="header-global">
   <a href="Accueil.php"><img src="img/zovana3.png" class="logo" alt=""></a> <hr>
     <nav id="barre-centrale">  
