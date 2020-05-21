@@ -21,7 +21,7 @@
             <div class="bloc_type_épreuve"><a href="Quizz_Mathématiques_CNB1.php">Quizz</a></div>
             <div class="bloc_type_épreuve"><a href="DS_Mathématiques_CNB1.php">DS</a></div>
             <div class="bloc_type_épreuve"><a href="Partiel_Mathématiques_CNB1.php">Partiel</a></div>
-        </div>
+        </div><br>
     </body>
     <?php include("../includes/footer.php")?>
 </html>
