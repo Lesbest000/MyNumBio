@@ -4,11 +4,11 @@ $email=$_SESSION['email'];
 $timestamp = date("Y-m-d H:i:s");
 
 //Les noms de fichiers//////IMPORTANT/////////////////////////// Le chemin des fichiers
-$fichier="Depot";
-$classe="";//CNB1/2/3
-$matiere="";//Mathematiques...
-$type="";//Quiz / DS/ Partiel
-$annee="";//2019-2020
+$fl_fichier="Depot";
+$fl_classe="";//CNB1/2/3
+$fl_matiere="";//Mathematiques...
+$fl_type="";//Quiz / DS/ Partiel
+$fl_annee="";//2019-2020
 
 //Connexion a la bdd
 
@@ -34,7 +34,7 @@ $link = mysqli_connect ($db_host,$db_user,$db_pass,$db_name);
   	$file_text = mysqli_real_escape_string($link, $_POST['file_text']);
 
   	// Chemin fichier
-      $target = "$fichier/$classe/$matiere/$type/$annee/".basename($file);
+      $target = "$fl_fichier/$fl_classe/$fl_matiere/$fl_type/$fl_annee/".basename($file);
 
 
 
@@ -60,7 +60,7 @@ $link = mysqli_connect ($db_host,$db_user,$db_pass,$db_name);
   	$file_text = mysqli_real_escape_string($link, $_POST['file_text']);
 
   	// Chemin fichier
-      $target = "$fichier/$classe/$matiere/$type/$annee/".basename($file);
+      $target = "$fl_fichier/$fl_classe/$fl_matiere/$fl_type/$fl_annee/".basename($file);
 
 
 
@@ -86,7 +86,7 @@ $link = mysqli_connect ($db_host,$db_user,$db_pass,$db_name);
 </head>
 <body>
 <?php include("../../includes/header.php")?>
-    <?php echo"<h1>$annee</h1>"?>
+    <?php echo"<h1>$fl_annee</h1>"?>
 	<div id="depot_page">
 		<div id="depot">
 <h1 style="text-align:center">Sujet</h1>			
@@ -97,7 +97,7 @@ $link = mysqli_connect ($db_host,$db_user,$db_pass,$db_name);
     while ($row = mysqli_fetch_array($result_s)) {
 
         echo "<div id='img_div'>";
-        echo"<a href='$fichier/$classe/$matiere/$type/$annee/$row[file]' target='_blank'>".$row['file']."</a>";  
+        echo"<a href='$fl_fichier/$fl_classe/$fl_matiere/$fl_type/$fl_annee/$row[file]' target='_blank'>".$row['file']."</a>";  
         echo "</div>";
         echo "<div id='txt_div'>";
         echo "<p>".$row['file_text']."</p>";
@@ -138,7 +138,7 @@ $link = mysqli_connect ($db_host,$db_user,$db_pass,$db_name);
     while ($row = mysqli_fetch_array($result_c)) {
 
         echo "<div id='img_div'>";
-        echo"<a href='$fichier/$classe/$matiere/$type/$annee/$row[file]' target='_blank'>".$row['file']."</a>";  
+        echo"<a href='$fl_fichier/$fl_classe/$fl_matiere/$fl_type/$fl_annee/$row[file]' target='_blank'>".$row['file']."</a>";  
         echo "</div>";
         echo "<div id='txt_div'>";
         echo "<p>".$row['file_text']."</p>";

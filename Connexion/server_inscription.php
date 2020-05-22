@@ -67,6 +67,10 @@ if(mysqli_num_rows($req_e) > 0){
  }else{
 $sql="INSERT INTO `$db_table`(`email`, `password`) VALUES('$email', '$password')";  
 $inscription=mysqli_query($link,$sql);
+
+echo "<script type='text/javascript'>alert('Vous êtes inscrit en tant que $prenom $nom');
+window.location.assign('../Accueil.php')</script>";
+
  }
 
 
@@ -82,7 +86,3 @@ if ( $inscription == FALSE )
 mysqli_close($link); 
 ?>
 
-<script type="text/javascript">
-alert("Vous êtes maintenant inscrit !");
-window.location.assign("../Accueil.php");
-</script>

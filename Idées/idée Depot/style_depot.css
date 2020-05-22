@@ -1,29 +1,37 @@
-#depot{
+#depot_page{
 display: flex;
 justify-content: space-around;
+
 }
+#depot{
+padding: 10 px;
+padding: 20px;
+border-radius: 0.9%;
+border: 2px solid #cbcbcb;
+    
+    }
 #sujet{
-width: 40%;
-height: 800px;
+width: 100%;
+height: 500px;
 margin: 15px auto;
-border: 4px solid #cbcbcb;
 display:block;
 float: left;
 overflow: scroll;
+
 }
 #correction{
-width: 40%;
-height: 800px;
+width: 100%;
+height: 500px;
 margin: 15px auto;
-border: 4px solid #cbcbcb;
 display:block;
 float:right;
 overflow: scroll;
+
 }
 
 #form{
     
-width: 50%;
+width: 30%;
 margin: 20px auto;
 }
 #form div{
@@ -42,12 +50,11 @@ content: "";
 display: block;
 clear: both;
 }
-#deposer{
+#deposer div{
     display: flex; 
     flex-direction: column;
-}
-#deposer div{
-margin: 20px auto; 
+    margin: 20px auto; 
+    width: 80%;
 }
 
 #img_div{

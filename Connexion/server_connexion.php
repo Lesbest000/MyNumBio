@@ -55,7 +55,7 @@ if($row['email']== $email && $row['password'] == $password){
 
 
 
-   echo "<script type='text/javascript'>alert('Vous êtes maintenant connecté en tant que $prenom $nom');
+   echo "<script type='text/javascript'>alert('Bienvenue $prenom $nom');
    window.location.assign('../Accueil.php')</script>";
 
 
