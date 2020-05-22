@@ -22,7 +22,12 @@
 
 </div>
 -->
-
+<?php
+session_start();
+echo $_SESSION['email'];
+echo $_SESSION['prenom'];
+echo$_SESSION['nom'];
+?>
 
 <!DOCTYPE html>
 <html>

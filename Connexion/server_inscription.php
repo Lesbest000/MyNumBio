@@ -1,5 +1,9 @@
 <?php
-//Va chercher valeurs dans le form
+//Commencer session
+session_start();
+$_SESSION['email'] = $_POST['email'];
+
+//Voir si les deux codes sont les mêmes
 $password_1=$_POST['password_1'];
 $password_2=$_POST['password_2'];
 
@@ -8,13 +12,25 @@ if($password_1!=$password_2){
    location='Connexion.php'</script>";
    die();
 }
-
+//Va chercher valeurs dans le form
 $email = $_POST['email'];
 $password = $_POST['password_1'];
 $email = mb_strtolower($email);
 $password=md5($password_1);
 
-//Voir si les deux codes sont les mêmes
+//isole nom prenom
+$emailarray  = explode('@',$email);
+$emailSuffix = $emailarray[0];
+$emailarray1  = explode('.',$emailSuffix);
+$prenom = $emailarray1[0];
+$nom =$emailarray1[1];
+$nom = mb_strtoupper($nom); 
+$prenom = ucfirst($prenom);
+
+$_SESSION['nom'] = $nom;
+$_SESSION['prenom'] =$prenom;
+
+
 
 
 
