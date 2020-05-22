@@ -1,0 +1,125 @@
+<?php
+session_start();
+$email=$_SESSION['email'];
+$timestamp = date("Y-m-d H:i:s");
+
+//Les noms de fichiers//////IMPORTANT/////////////////////////// Le chemin des fichiers
+$fichier="Depot";
+$classe="";//CNB1/2/3
+$matiere="";//Mathematiques...
+$type="";//Quiz / DS/ Partiel
+$annee="";//2019-2020
+
+//Connexion a la bdd
+
+$db_host = "127.0.0.1";
+$db_user = "root";
+$db_pass = "";
+$db_name = "test"; //nom de la bdd
+$db_table="images"; //nom de la table
+
+$link = mysqli_connect ($db_host,$db_user,$db_pass,$db_name);
+
+  // Initialisation de la variable
+  $msg = "";
+
+  // Si click ...
+  if (isset($_POST['upload'])) {
+      
+    echo "<script type='text/javascript'>alert('Êtes-vous sûr de vouloir déposer ce fichier ?')</script>";
+    // Nom image 
+    $file = $_FILES['file']['name'];
+  	// Cherche text
+  	$file_text = mysqli_real_escape_string($link, $_POST['file_text']);
+
+  	// Chemin fichier
+      $target = "$fichier/$classe/$matiere/$type/$annee/".basename($file);
+
+
+
+    
+  	if (move_uploaded_file($_FILES['file']['tmp_name'], $target)) {
+    $sql = "INSERT INTO $db_table (file, file_text, path,author,time) VALUES ('$file', '$file_text','$target','$email','$timestamp')";
+  	// Requete
+      mysqli_query($link, $sql);
+      $msg= "Votre document a été déposé.";
+	  echo "<script type='text/javascript'>alert('$msg')</script>";
+  	}else{
+        $msg= "Erreur. Veuillez réessayer s'il vous plaît.";
+		echo "<script type='text/javascript'>alert('$msg')</script>";
+  	}
+  }
+  $result = mysqli_query($link, "SELECT * FROM $db_table ORDER BY 'time'");
+
+?>
+<!DOCTYPE html>
+<html>
+<head>
+<title>Dêpot <?php echo"$type $matiere"?></title>
+<link rel="stylesheet" href="style_depot.css">
+</head>
+<body>
+<?php include("../../includes/header.php")?>
+    <?php echo"<h1>$annee</h1>"?>
+	<div id="depot">
+<div id="sujet">
+<h1 style="text-align:center">Sujet</h1>
+  <form method="POST" action="depot.php" enctype="multipart/form-data">
+	  <input type="hidden" name="size" value="1000000">
+	  <div id="deposer">
+  	<div>
+  	  <input type="file" name="file" accept="application/pdf">
+  	</div>
+  	<div>
+      <textarea 
+	  text-align="center"
+      	id="text" 
+      	cols="40" 
+      	rows="4" 
+      	name="file_text" 
+      	placeholder="Décrivez l'épreuve..."></textarea>
+  	</div>
+  	<div>
+  		<button type="submit" name="upload">POST</button>
+	  </div>
+</div>
+  </form>
+</div>
+<div id="correction">
+<h1 style="text-align:center">Correction</h1>
+  <?php
+
+    while ($row = mysqli_fetch_array($result)) {
+
+        echo "<div id='img_div'>";
+        echo"<a href='$fichier/$classe/$matiere/$type/$annee/$row[file]' target='_blank'>".$row['file']."</a>";  
+        echo "</div>";
+        echo "<div id='txt_div'>";
+        echo "<p>".$row['file_text']."</p>";
+        echo "</div>";
+    }
+  ?>
+  <form method="POST" action="depot.php" enctype="multipart/form-data">
+  	<input type="hidden" name="size" value="1000000">
+  	<div>
+  	  <input type="file" name="file" accept="application/pdf">
+  	</div>
+	  <div id="deposer">
+  	<div>
+      <textarea 
+      	id="text" 
+      	cols="40" 
+      	rows="4" 
+      	name="file_text" 
+      	placeholder="Description de l'épreuve..."></textarea>
+  	</div>
+  	<div>
+  		<button type="submit" name="upload">Déposer</button>
+  	</div>
+	  </div>
+  </form>
+</div>
+</div>
+</body>
+<?php include("../../includes/footer.php")?>
+</html>
