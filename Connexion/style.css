@@ -25,6 +25,7 @@ h1{
 body{
     padding-top: 3%;
     background-image:url('ADN3.jpg');
+    background-attachment: fixed;
 }
 
 .formulaire-box{
