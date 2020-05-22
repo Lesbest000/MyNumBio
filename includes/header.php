@@ -9,7 +9,13 @@
 
   <body>
 
-  <a href="Connexion/deconnexion.php">Se déconnecter</a>
+  <a href="Connexion/deconnexion.php" style="text-align:right">Se déconnecter</a>
+  <?php
+echo"<br>";
+echo $_SESSION['email'];
+echo"<br>";
+echo $_SESSION['prenom']." ".$_SESSION['nom'];
+?>
 
   <header class="header-global">
   
