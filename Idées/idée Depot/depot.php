@@ -87,9 +87,11 @@ $link = mysqli_connect ($db_host,$db_user,$db_pass,$db_name);
 <body>
 <?php include("../../includes/header.php")?>
     <?php echo"<h1>$annee</h1>"?>
-	<div id="depot">
+	<div id="depot_page">
+		<div id="depot">
+<h1 style="text-align:center">Sujet</h1>			
 <div id="sujet">
-<h1 style="text-align:center">Sujet</h1>
+
   <?php
 
     while ($row = mysqli_fetch_array($result_s)) {
@@ -102,7 +104,9 @@ $link = mysqli_connect ($db_host,$db_user,$db_pass,$db_name);
         echo "</div>";
     }
   ?>
-  <form method="POST" action="depot.php" enctype="multipart/form-data">
+
+</div>  
+<form method="POST" action="depot.php" enctype="multipart/form-data">
 	  <input type="hidden" name="size" value="1000000">
 	  <div id="deposer">
   	<div>
@@ -119,14 +123,16 @@ $link = mysqli_connect ($db_host,$db_user,$db_pass,$db_name);
       	placeholder="Décrivez l'épreuve..."></textarea>
   	</div>
   	<div>
-  		<button type="submit" name="upload_s">Déposer</button> 
+  		<button type="submit" name="upload_s" style="background-color:lightblue">Déposer</button> 
 		 </div> 
 		 <p>Veuillez nommer le fichier de la manière suivante: "040520_Suj_Partiel_Optique.pdf"</p>
 </div>
-  </form>
 </div>
-<div id="correction">
+  </form>
+<div id="depot">
 <h1 style="text-align:center">Correction</h1>
+<div id="correction">
+
   <?php
 
     while ($row = mysqli_fetch_array($result_c)) {
@@ -139,7 +145,9 @@ $link = mysqli_connect ($db_host,$db_user,$db_pass,$db_name);
         echo "</div>";
     }
   ?>
-  <form method="POST" action="depot.php" enctype="multipart/form-data">
+  
+</div>
+<form method="POST" action="depot.php" enctype="multipart/form-data">
 	  <input type="hidden" name="size" value="1000000">  
 	<div id="deposer">
   	<div>
@@ -156,12 +164,12 @@ $link = mysqli_connect ($db_host,$db_user,$db_pass,$db_name);
       	placeholder="Description de l'épreuve..."></textarea>
   	</div>
   	<div>
-  		<button type="submit" name="upload_c">Déposer</button>
+  		<button type="submit" name="upload_c" style="background-color:lightblue">Déposer</button>
   	</div>
 	  <p>Veuillez nommer le fichier de la manière suivante: "040520_corr_ex1,2_DS_Matiere.pdf"</p>
 	  </div>
+	  </div>
   </form>
-</div>
 </div>
 </body>
 <?php include("../../includes/footer.php")?>
