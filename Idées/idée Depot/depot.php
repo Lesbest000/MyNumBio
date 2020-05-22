@@ -3,14 +3,23 @@ session_start();
 $email=$_SESSION['email'];
 $timestamp = date("Y-m-d H:i:s");
 
-//Les noms de fichiers//////IMPORTANT/////////////////////////// Le chemin des fichiers
+//Les noms de fichiers//////IMPORTANT/////////////////////////// Le chemin des fichiers (A remplir)
 $fl_fichier="Depot";
 $fl_classe="";//CNB1/2/3
 $fl_matiere="";//Mathematiques...
 $fl_type="";//Quiz / DS/ Partiel
 $fl_annee="";//2019-2020
 
-//Connexion a la bdd
+$nom_php="depot.php"; //ne pas oublier de changer dans forms
+
+$matiere_page="";//en minuscule avec _
+$type_epreuve="";
+
+//Pour trier les épreuves
+$matiere="";
+$type="";
+
+//Connexion a la bdd(A remplir)
 
 $db_host = "127.0.0.1";
 $db_user = "root";
@@ -24,14 +33,23 @@ $link = mysqli_connect ($db_host,$db_user,$db_pass,$db_name);
   // Initialisation de la variable
   $msg = "";
 
-  // Si click ...
+// Si click sur depot sujet////////////////////////////
   if (isset($_POST['upload_s'])) {
-      
+    if (empty($_POST['matiere']) or empty($_POST['type']) or empty($_POST['file'])) {
+		echo "<script type='text/javascript'>alert('Veuillez saisir tout les champs nécessaires');location='$nom_php'</script>";
+		die();
+
+	}else{
+		$matiere=$_POST['matiere'];
+		$type=$_POST['type'];
+	}
     echo "<script type='text/javascript'>alert('Êtes-vous sûr de vouloir déposer ce fichier ?')</script>";
     // Nom image 
     $file = $_FILES['file']['name'];
   	// Cherche text
-  	$file_text = mysqli_real_escape_string($link, $_POST['file_text']);
+	$file_text = mysqli_real_escape_string($link, $_POST['file_text']);
+	
+
 
   	// Chemin fichier
       $target = "$fl_fichier/$fl_classe/$fl_matiere/$fl_type/$fl_annee/".basename($file);
@@ -40,7 +58,7 @@ $link = mysqli_connect ($db_host,$db_user,$db_pass,$db_name);
 
     
   	if (move_uploaded_file($_FILES['file']['tmp_name'], $target)) {
-    $sql = "INSERT INTO $db_table_s (file, file_text, path,author,time) VALUES ('$file', '$file_text','$target','$email','$timestamp')";
+    $sql = "INSERT INTO $db_table_s (file, file_text, path,author,time,type,matiere) VALUES ('$file', '$file_text','$target','$email','$timestamp','$type','$matiere')";
   	// Requete
       mysqli_query($link, $sql);
       $msg= "Votre document a été déposé.";
@@ -50,9 +68,20 @@ $link = mysqli_connect ($db_host,$db_user,$db_pass,$db_name);
 		echo "<script type='text/javascript'>alert('$msg')</script>";
   	}
   }
-  $result_s = mysqli_query($link, "SELECT * FROM $db_table_s ORDER BY 'time'");
+//Requete pour filtrage
+  $result_s = mysqli_query($link, "SELECT * FROM $db_table_s WHERE matiere = '$matiere_page' && type='$type_epreuve'");
+  
+ //Si click sur depot corrigé///////////////////
+
   if (isset($_POST['upload_c'])) {
-      
+    if (empty($_POST['matiere']) or empty($_POST['type']) or empty($_POST['file'])) {
+		echo "<script type='text/javascript'>alert('Veuillez saisir tout les champs nécessaires');location='$nom_php'</script>";
+		die();
+
+	}else{
+		$matiere=$_POST['matiere'];
+		$type=$_POST['type'];
+	}   
     echo "<script type='text/javascript'>alert('Êtes-vous sûr de vouloir déposer ce fichier ?')</script>";
     // Nom image 
     $file = $_FILES['file']['name'];
@@ -63,10 +92,9 @@ $link = mysqli_connect ($db_host,$db_user,$db_pass,$db_name);
       $target = "$fl_fichier/$fl_classe/$fl_matiere/$fl_type/$fl_annee/".basename($file);
 
 
-
     
   	if (move_uploaded_file($_FILES['file']['tmp_name'], $target)) {
-    $sql = "INSERT INTO $db_table_c (file, file_text, path,author,time) VALUES ('$file', '$file_text','$target','$email','$timestamp')";
+    $sql = "INSERT INTO $db_table_c (file, file_text, path,author,time,type,matiere) VALUES ('$file', '$file_text','$target','$email','$timestamp','$type','$matiere')";
   	// Requete
       mysqli_query($link, $sql);
       $msg= "Votre document a été déposé.";
@@ -76,7 +104,9 @@ $link = mysqli_connect ($db_host,$db_user,$db_pass,$db_name);
 		echo "<script type='text/javascript'>alert('$msg')</script>";
   	}
   }
-  $result_c = mysqli_query($link, "SELECT * FROM $db_table_c ORDER BY 'time'");
+
+//Requete pour filtrage
+  $result_c = mysqli_query($link, "SELECT * FROM $db_table_c WHERE matiere = '$matiere_page' && type='$type_epreuve'");
 ?>
 <!DOCTYPE html>
 <html>
@@ -89,7 +119,9 @@ $link = mysqli_connect ($db_host,$db_user,$db_pass,$db_name);
     <?php echo"<h1>$fl_annee</h1>"?>
 	<div id="depot_page">
 		<div id="depot">
-<h1 style="text-align:center">Sujet</h1>			
+
+<h1 style="text-align:center">Sujet</h1>	
+
 <div id="sujet">
 
   <?php
@@ -106,13 +138,31 @@ $link = mysqli_connect ($db_host,$db_user,$db_pass,$db_name);
   ?>
 
 </div>  
-<form method="POST" action="depot.php" enctype="multipart/form-data">
+<form method="POST" action=depot.php enctype="multipart/form-data">
 	  <input type="hidden" name="size" value="1000000">
 	  <div id="deposer">
   	<div>
   	  <input type="file" name="file" accept="application/pdf">	
-  	</div>
-	 
+	  </div>
+	  <label>(*)</label>
+	  <select name="matiere">
+	            <option value="">-- Veuillez sélectionner la matière --</option>
+	            <option value="mathematiques">Mathématiques</option>
+	            <option value="mecanique">Mécanique</option>
+	            <option value="optique">Optique</option>
+				<option value="chimie">Chimie</option>
+				<option value="biochimie">Biochimie</option>
+				<option value="biologie_cellulaire">Biologie Cellulaire</option>
+				<option value="biologie_animale">Biologie Animale</option>
+				<option value="thermodynamique">Thermodynamique</option>
+			  </select> 
+		<label>(*)</label>
+		<select name="type">
+		<option value="">-- Type de l'épreuve--</option>
+		<option value="quiz">Quiz</option>
+		<option value="ds">DS</option>
+		<option value="partiel">Partiel</option>
+		</select> 
   	<div>
       <textarea 
 	  text-align="center"
@@ -125,7 +175,9 @@ $link = mysqli_connect ($db_host,$db_user,$db_pass,$db_name);
   	<div>
   		<button type="submit" name="upload_s" style="background-color:lightblue">Déposer</button> 
 		 </div> 
-		 <p>Veuillez nommer le fichier de la manière suivante: "040520_Suj_Partiel_Optique.pdf"</p>
+		 <div>
+	  <p>Nomenclature:"date_épreuve_Matiere.pdf" ex:040520_quiz_Optique</p>
+	</div>
 </div>
 </div>
   </form>
@@ -142,18 +194,36 @@ $link = mysqli_connect ($db_host,$db_user,$db_pass,$db_name);
         echo "</div>";
         echo "<div id='txt_div'>";
         echo "<p>".$row['file_text']."</p>";
-        echo "</div>";
+		echo "</div>";
     }
   ?>
   
 </div>
-<form method="POST" action="depot.php" enctype="multipart/form-data">
+<form method="POST" action=depot.php enctype="multipart/form-data">
 	  <input type="hidden" name="size" value="1000000">  
 	<div id="deposer">
   	<div>
   	  <input type="file" name="file" accept="application/pdf">
   	</div>
-	  
+	  <label>(*)</label>
+	  <select name="matiere">
+	            <option value="">-- Veuillez sélectionner la matière --</option>
+	            <option value="mathematiques">Mathématiques</option>
+	            <option value="mecanique">Mécanique</option>
+	            <option value="optique">Optique</option>
+				<option value="chimie">Chimie</option>
+				<option value="biochimie">Biochimie</option>
+				<option value="biologie_cellulaire">Biologie Cellulaire</option>
+				<option value="biologie_animale">Biologie Animale</option>
+				<option value="thermodynamique">Thermodynamique</option>
+			  </select> 
+		<label>(*)</label>
+		<select name="type">
+		<option value="">-- Type de l'épreuve--</option>
+		<option value="quiz">Quiz</option>
+		<option value="ds">DS</option>
+		<option value="partiel">Partiel</option>
+		</select> 	  
 	
   	<div>
       <textarea 
@@ -165,8 +235,10 @@ $link = mysqli_connect ($db_host,$db_user,$db_pass,$db_name);
   	</div>
   	<div>
   		<button type="submit" name="upload_c" style="background-color:lightblue">Déposer</button>
-  	</div>
-	  <p>Veuillez nommer le fichier de la manière suivante: "040520_corr_ex1,2_DS_Matiere.pdf"</p>
+	  </div>
+	  <div>
+	  <p>Nomenclature:"date_exercice_Matiere.pdf" ex:040520_1,2_Optique</p>
+	</div>
 	  </div>
 	  </div>
   </form>
