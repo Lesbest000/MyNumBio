@@ -7,7 +7,6 @@ $timestamp = date("Y-m-d H:i:s");
 $matiere="";
 $type="";
 
-
 //Les noms de fichiers//////IMPORTANT/////////////////////////// Le chemin des fichiers (A remplir)////////////////////////////////////
 $fl_fichier="Depot";
 $fl_classe="";//CNB1/2/3
@@ -15,11 +14,12 @@ $fl_matiere="";//Mathematiques...
 $fl_type="";//Quiz / DS/ Partiel
 $fl_annee="";//2019-2020
 
-$nom_php="depot.php"; //ne pas oublier de changer dans forms
+$nom_php="depot.php"; //ne pas oublier de changer dans forms x2
 
-$matiere_page="";//en minuscule avec _
-$type_epreuve="";//en minuscule avec _
-$classe="";
+$matiere_page="mathematiques";//en minuscule avec _
+$type_epreuve="quiz";//en minuscule avec _
+$classe="cnb1";
+$annee="2018-2019";
 
 //Connexion a la bdd(A remplir)
 
@@ -37,7 +37,7 @@ $link = mysqli_connect ($db_host,$db_user,$db_pass,$db_name);
 
 // Si click sur depot sujet////////////////////////////
 if (isset($_POST['upload_s'])) {
-	if (empty($_POST['matiere']) or empty($_POST['type'])  or empty($_POST['classe'])) {
+	if (empty($_POST['matiere']) or empty($_POST['type'])  or empty($_POST['classe']) or empty($_POST['annee'])) {
 		echo "<script type='text/javascript'>alert('Veuillez saisir tout les champs nécessaires');location='$nom_php'</script>";
 		die();
 
@@ -45,6 +45,7 @@ if (isset($_POST['upload_s'])) {
 		$matiere=$_POST['matiere'];
 		$type=$_POST['type'];
 		$classe=$_POST['classe'];
+		$annee=$_POST['annee'];
 	}
     echo "<script type='text/javascript'>alert('Êtes-vous sûr de vouloir déposer ce fichier ?')</script>";
     // Nom image 
@@ -61,7 +62,7 @@ if (isset($_POST['upload_s'])) {
 
     
   	if (move_uploaded_file($_FILES['file']['tmp_name'], $target)) {
-    $sql = "INSERT INTO $db_table_s (file, file_text, path,author,time,type,matiere,classe) VALUES ('$file', '$file_text','$target','$email','$timestamp','$type','$matiere','$classe')";
+    $sql = "INSERT INTO $db_table_s (file, file_text, path,author,time,type,matiere,classe,annee) VALUES ('$file', '$file_text','$target','$email','$timestamp','$type','$matiere','$classe','$annee')";
   	// Requete
       mysqli_query($link, $sql);
       $msg= "Votre document a été déposé.";
@@ -72,12 +73,12 @@ if (isset($_POST['upload_s'])) {
   	}
 }
 //Requete pour filtrage
-  $result_s = mysqli_query($link, "SELECT * FROM $db_table_s WHERE matiere = '$matiere_page' && type='$type_epreuve'");
+  $result_s = mysqli_query($link, "SELECT * FROM $db_table_s WHERE matiere = '$matiere_page' && type='$type_epreuve'&& classe='$classe'");
   
  //Si click sur depot corrigé///////////////////
 
 if (isset($_POST['upload_c'])) {
-    if (empty($_POST['matiere']) or empty($_POST['type']) or empty($_POST['classe'])) {
+    if (empty($_POST['matiere']) or empty($_POST['type']) or empty($_POST['classe']) or empty($_POST['annee'])) {
 		echo "<script type='text/javascript'>alert('Veuillez saisir tout les champs nécessaires');location='$nom_php'</script>";
 		die();
 
@@ -85,6 +86,7 @@ if (isset($_POST['upload_c'])) {
 		$matiere=$_POST['matiere'];
 		$type=$_POST['type'];
 		$classe=$_POST['classe'];
+		$annee=$_POST['annee'];
 	}   
     echo "<script type='text/javascript'>alert('Êtes-vous sûr de vouloir déposer ce fichier ?')</script>";
     // Nom image 
@@ -98,7 +100,7 @@ if (isset($_POST['upload_c'])) {
 
     
   	if (move_uploaded_file($_FILES['file']['tmp_name'], $target)) {
-    	$sql = "INSERT INTO $db_table_c (file, file_text, path,author,time,type,matiere,classe) VALUES ('$file', '$file_text','$target','$email','$timestamp','$type','$matiere','$classe')";
+    	$sql = "INSERT INTO $db_table_c (file, file_text, path,author,time,type,matiere,classe,annee) VALUES ('$file', '$file_text','$target','$email','$timestamp','$type','$matiere','$classe','$annee')";
   	// Requete
 		mysqli_query($link, $sql);
 		$msg= "Votre document a été déposé.";
@@ -110,7 +112,7 @@ if (isset($_POST['upload_c'])) {
 }
 
 //Requete pour filtrage
-$result_c = mysqli_query($link, "SELECT * FROM $db_table_c WHERE matiere = '$matiere_page' && type='$type_epreuve'");
+$result_c = mysqli_query($link, "SELECT * FROM $db_table_c WHERE matiere = '$matiere_page' && type='$type_epreuve'&& classe='$classe'");
 ?>
 <!DOCTYPE html>
 <html>
@@ -173,6 +175,14 @@ $result_c = mysqli_query($link, "SELECT * FROM $db_table_c WHERE matiere = '$mat
 				<option value="cnb1">CNB1</option>
 				<option value="cnb2">CNB2</option>
 				<option value="cnb3">CNB3</option>
+			</select> 
+			<label>(*)</label>
+			<select name="annee">
+				<option value="">-- Année--</option>
+				<option value="2018-2019">2018-2019</option>
+				<option value="2019-2020">2019-2020</option>
+				<option value="2020-2021">2020-2021</option>
+				<option value="2021-2022">2021-2022</option>
 			</select> 
 		</div>
 		<div>
@@ -239,6 +249,14 @@ $result_c = mysqli_query($link, "SELECT * FROM $db_table_c WHERE matiere = '$mat
 				<option value="cnb2">CNB2</option>
 				<option value="cnb3">CNB3</option>
 			</select>  
+			<label>(*)</label>
+			<select name="annee">
+				<option value="">-- Année--</option>
+				<option value="2018-2019">2018-2019</option>
+				<option value="2019-2020">2019-2020</option>
+				<option value="2020-2021">2020-2021</option>
+				<option value="2021-2022">2021-2022</option>
+			</select> 
 			</div>
   		<div>
 		<div>
