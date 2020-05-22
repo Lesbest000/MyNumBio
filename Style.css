@@ -1,6 +1,6 @@
-#barre-centrale a{
+ nav a{
     display: block ;
-    background: orangered ;
+    background: rgb(68, 68, 255) ;
     color: white ;
     line-height: 1em ;
     text-align: center ;
@@ -15,6 +15,15 @@
 #barre-centrale a:hover, #barre-centrale a:active, #barre-centrale a:focus{
     color: white;
     text-decoration: underline;
+}
+
+h1{
+    font-size: 2em;
+    color:#f8f8f8;
+    font-family: impact, fantasy;
+    text-align: center;
+    text-decoration: underline;
+    text-shadow: #0d67ce 2px 5px;
 }
 
 .isen{
@@ -65,24 +74,6 @@ a:hover {
     text-decoration: underline;
 }
 
-#barre-centrale  {
-    display: block ;
-    background: orangered ;
-    color: white ;
-    line-height: 1em ;
-    text-align: center ;
-    text-decoration: none;
-    display: flex;
-    justify-content: space-around;
-    text-align: center;
-    padding: 12px 10px;
-    width: 100%;
-}
-
-#barre-centrale:hover, #barre-centrale:active, #barre-centrale:focus{
-    color: white;
-    text-decoration: underline;
-}
 
 .contener_gauche{
     display: flex;

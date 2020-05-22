@@ -8,6 +8,7 @@
   </head>
   <body>
   <header class="header-global">
+    <h1>MyNumBio</h1>
   <a href="Accueil.php"><img src="img/zovana3.png" class="logo" alt=""></a> <hr>
     <nav id="barre-centrale">  
       <a href="Accueil.php">ACCUEIL</a>
