@@ -80,13 +80,13 @@ session_start();
     </script>-->
     <head>
         <meta charset="utf-8" />
-        <link rel="stylesheet" href="../Style.css" />
+        <link rel="stylesheet" href="Style.css" />
         <title>Accueil MyNumBio</title>
     </head>
 
     <?php include("includes/header.php")?>
     <body>
-        <h1 class="titre">Bonjour et bienvenue à tous!</h1>
+        <h1 class="titre">Bonjour et bienvenue aux CNB!</h1>
         <!--<div class="centre">
             <script language="javascript">
                 StartAnim();
