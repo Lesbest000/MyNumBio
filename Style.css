@@ -6,35 +6,11 @@
 body{
     box-sizing: border-box;
 }
-#barre-centrale {
-    display: block ;
-    background:rgb(92, 92, 238) ;
-    color: #fff ;
-    font: 1em "Trebuchet MS",Arial,sans-serif ;
-    line-height: 1em ;
-    display: flex;
-    justify-content: space-around;
-    text-align: center;
-    text-decoration: none;
-    padding: 12px 10px;
-    width: 100%;
-    height: 25px;
-}
-
-#barre-centrale a {
-    text-decoration: none;
-    color: white;
-}
-
-#barre-centrale a:hover, #barre-centrale a:focus, #barre-centrale a:active {
-    color: white;
-    height: 25px;
-    text-decoration: underline;
-  }
 
 .menu-bar{
     background: rgb(92, 92, 238);
     text-align:center;
+    
 }
 .menu-bar ul {
     display: flex;
@@ -42,7 +18,7 @@ body{
     color:white;
 }
 .menu-bar ul li{
-    width: 120px; 
+    width: 250px; 
     margin: 15px;
     padding:15px;
 
@@ -62,29 +38,32 @@ body{
 .sub-menu1{
     display:none;
 }
-.menu-bar ul li:hover,.sub-menu1{
+.menu-bar ul li:hover .sub-menu1{
     display: block;
     position: absolute;
     background:rgb(92, 92, 238);
     margin-top: 15px;
-    margin-left: -15px;
+    text-decoration: none;
+
 }
-.menu-bar ul li:hover,.sub-menu1 ul{
+.menu-bar ul li:hover .sub-menu1 ul{
     display: block;
     margin: 10px;
 }
-.menu-bar ul li:hover, .sub-menu1 ul li{
+.menu-bar ul li:hover .sub-menu1 ul li{
     width: 150px;
     padding: 10px;
     border-bottom: 1px dotted #fff;
     background: transparent;
-    border-radius: 0;
+    border-radius: 5px;
     text-align: left;
 }
-.menu-bar ul li:hover, .sub-menu1 ul li: last-child{
+.menu-bar ul li:hover .sub-menu1 ul li: last-child{
     border-bottom: none;
 }
-
+.menu-bar ul li:hover .sub-menu1 ul li a:hover{
+    color: white;
+}
 .titre{
 color:white;
 text-shadow: 2px 2px 3px black;
@@ -218,17 +197,15 @@ text-decoration: underline;
 }
 
 .top a{
-    color:black;
-    text-decoration: none;
-}
-
-.top a :hover,.top a :focus,.top a :active {
+    color: white;
     text-decoration: underline;
-
 }
+
+
 footer{
     text-align: center;
-    background-color: black;
+    background-image: url(img/atrium3.png);
+    height: 120px;
     color: white;
     line-height: 2;
 }
