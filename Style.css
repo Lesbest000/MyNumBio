@@ -1,20 +1,93 @@
- nav a{
+
+*{
+    padding: 0;
+    margin: 0;
+}
+body{
+    box-sizing: border-box;
+}
+#barre-centrale {
     display: block ;
-    background: rgb(68, 68, 255) ;
-    color: white ;
+    background:rgb(92, 92, 238) ;
+    color: #fff ;
+    font: 1em "Trebuchet MS",Arial,sans-serif ;
     line-height: 1em ;
-    text-align: center ;
-    text-decoration: none;
     display: flex;
     justify-content: space-around;
     text-align: center;
+    text-decoration: none;
     padding: 12px 10px;
     width: 100%;
+    height: 25px;
 }
 
-#barre-centrale a:hover, #barre-centrale a:active, #barre-centrale a:focus{
+#barre-centrale a {
+    text-decoration: none;
     color: white;
+}
+
+#barre-centrale a:hover, #barre-centrale a:focus, #barre-centrale a:active {
+    color: white;
+    height: 25px;
     text-decoration: underline;
+  }
+
+.menu-bar{
+    background: rgb(92, 92, 238);
+    text-align:center;
+}
+.menu-bar ul {
+    display: flex;
+    list-style: none;
+    color:white;
+}
+.menu-bar ul li{
+    width: 120px; 
+    margin: 15px;
+    padding:15px;
+
+}
+.menu-bar ul li a {
+    color: white; 
+    text-decoration: none;
+}
+.menu-bar ul li:hover, .menu-bar ul li:focus{
+    text-decoration: underline;
+    background:blue;
+    border-radius: 3px;
+}
+.menu-bar .fa{
+    margin-right: 7px;
+}
+.sub-menu1{
+    display:none;
+}
+.menu-bar ul li:hover,.sub-menu1{
+    display: block;
+    position: absolute;
+    background:rgb(92, 92, 238);
+    margin-top: 15px;
+    margin-left: -15px;
+}
+.menu-bar ul li:hover,.sub-menu1 ul{
+    display: block;
+    margin: 10px;
+}
+.menu-bar ul li:hover, .sub-menu1 ul li{
+    width: 150px;
+    padding: 10px;
+    border-bottom: 1px dotted #fff;
+    background: transparent;
+    border-radius: 0;
+    text-align: left;
+}
+.menu-bar ul li:hover, .sub-menu1 ul li: last-child{
+    border-bottom: none;
+}
+
+.titre{
+color:white;
+text-shadow: 2px 2px 3px black;
 }
 
 h1{
@@ -40,14 +113,20 @@ h1{
     justify-content: center;
 }
 .bloc_gauche{
-background-color: rgba(39, 172, 182, 0.6);
+background-image: radial-gradient(circle at center,rgba(30, 237, 252), rgba(0, 140, 255,0.8));
 color: black;
 border-left: none;
-border-radius:5px;
-width: 150px;
-height: 100px;
-text-align: center justify;
+border-radius:15px;
 justify-content: center;
+text-decoration: none;
+padding: 15px;
+margin: 5px;
+font-size: 130%;
+box-shadow: 5px 5px 5px black;
+}   
+
+.bloc_gauche a{
+text-align: justify;
 text-decoration: none;
 }
 
@@ -55,50 +134,87 @@ h1{
 color: black;
 text-decoration: underline;
 text-align: center;
-
 }
+
 .bloc_gauche_actuel{
-background-color: rgba(41, 149, 211, 0.6);
+background-image: radial-gradient(circle at center,rgba(30, 252, 196, 0.7), rgba(0, 247, 255, 0.8));
 color: white;
 border-left: none;
-border-radius:5px;
+border-radius:15px;
+margin: 5px;
+font-size: 140%;
+padding: 10px;
+}
+
+.bloc_gauche_actuel a{
+text-align: justify;
 text-decoration: none;
+color: white;
 }
 
 .bloc_gauche:hover{
-background-color: blueviolet;
-color:white;
+background-image: radial-gradient(circle at center,rgba(30, 126, 252, 0.7), rgba(119, 0, 255, 0.8));
+font-size: 140%;
+padding:20px;
+}
+
+.bloc_gauche:hover a{
+    color:white;
 }
 
 a:hover {
     text-decoration: underline;
 }
 
-
 .contener_gauche{
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: space-around;
     align-items: flex-start;
-
+    width: 20%;
+    border: solid white;
+    margin: 0px;
 }
 
 .contener_type_épreuve{
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     justify-content: center;
-    align-items: center;
+    flex-wrap: nowrap;
+    border: solid white;
+    margin: auto;
+    width: 70%;
+    padding: 5px 10px;
+}
+
+.centre{
+    display:flex;
+    justify-content: center;
 }
 
 .bloc_type_épreuve{
-    margin: 5px;
-    color:black;
-    text-align: center justify;
-    text-decoration: none;
+    margin: 25px;
+    padding-top: 60px;
+    padding-bottom: 80px;
+    height: 50px;
+    width: 50px;
+    padding-left: 50px;
+    padding-right: 50px;
+    border-radius: 7px;
+    background-image: url("img/feuille.png");
 }
 
-.bloc_type_épreuve:hover{
-    color:blue;
+.bloc_type_épreuve a{
+color: black;
+text-decoration: none;
+font-size: 150%;
+text-align: justify;
+}
+
+
+
+.bloc_type_épreuve a:hover{
+text-decoration: underline;
 }
 
 .top a{
@@ -116,3 +232,36 @@ footer{
     color: white;
     line-height: 2;
 }
+
+body
+{
+    background-image: url("img/fondbois.jpg");
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+}
+
+.contener_centre_matières {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.slideshow {
+    width: 300px;
+    height: 300px;
+    overflow: hidden;
+    border: 3px solid #F2F2F2; 
+  }
+  
+  .slideshow ul {
+     /* 4 images donc 4 x 100% */
+    width: 300%;
+    height: 300px;
+    padding:0; margin:0;
+    list-style: none;
+  }
+  
+  .slideshow li {
+    float: left;
+  }
