@@ -206,13 +206,13 @@ footer{
     text-align: center;
     background-image: url(img/atrium3.png);
     height: 120px;
-    color: white;
+    color: black;
     line-height: 2;
 }
 
 body
 {
-    background-image: url("img/fondbois.jpg");
+    
     background-attachment: fixed;
     background-repeat: no-repeat;
 }
