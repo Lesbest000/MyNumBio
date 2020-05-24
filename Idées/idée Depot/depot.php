@@ -16,10 +16,10 @@ $fl_annee="";//2019-2020
 
 $nom_php="depot.php"; //ne pas oublier de changer dans forms x2
 
-$matiere_page="mathematiques";//en minuscule avec _
-$type_epreuve="quiz";//en minuscule avec _
-$classe="cnb1";
-$annee="2018-2019";
+$matiere_page="mecanique";//en minuscule avec _
+$type_epreuve="ds";//en minuscule avec _
+$classe="cnb1";//cnb1,2,3
+$annee="2019-2020";//2018-2019
 
 //Connexion a la bdd(A remplir)
 
@@ -114,6 +114,8 @@ if (isset($_POST['upload_c'])) {
 //Requete pour filtrage
 $result_c = mysqli_query($link, "SELECT * FROM $db_table_c WHERE matiere = '$matiere_page' && type='$type_epreuve'&& classe='$classe'");
 ?>
+
+
 <!DOCTYPE html>
 <html>
 <head>
