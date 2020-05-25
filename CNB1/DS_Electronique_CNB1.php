@@ -21,3 +21,9 @@ session_start();
             <div class="bloc_gauche"><a href="Chimie_CNB1.php">Chimie</a></div>
         </div>
         <h1 class="titre">DS d'Electronique</h1>
+
+
+        </body>
+
+    <?php include("../includes/footer.php")?>
+</html>
