@@ -15,7 +15,7 @@ session_start();
     <?php include("../includes/headerR.php")?><br>
     <body>
         
-        <?php include("../includes/Nav_matieres.php")?>
+        <?php include("../includes/Nav_matieres_CNB1.php")?>
         <h1 class="titre">Chimie CNB1</h1>
         <div class="contener_type_épreuve">
             <div class="bloc_type_épreuve"><a href="Quizz_Chimie_CNB1.php">Quizz</a></div>

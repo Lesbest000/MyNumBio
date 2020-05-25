@@ -13,7 +13,7 @@ session_start();
     <?php include("../includes/headerR.php")?><br>
     <body>
         
-        <?php include("../includes/Nav_matieres.php")?>
+        <?php include("../includes/Nav_matieres_CNB1.php")?>
 
         <h1 class="titre">Biochimie CNB1</h1>
 

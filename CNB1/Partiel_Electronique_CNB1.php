@@ -14,7 +14,7 @@ session_start();
     <?php include("../includes/headerR.php")?><br>
     <body>
         
-        <?php include("../includes/Nav_matieres.php")?>
+        <?php include("../includes/Nav_matieres_CNB1.php")?>
 
         <h1 class="titre">Partiel d'Electronique</h1>
         <div class="contener_années">

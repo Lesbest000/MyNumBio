@@ -37,16 +37,23 @@ echo $_SESSION['prenom']." ".$_SESSION['nom'];
           </ul>
         <div>
     </li>
-      <li><a href="../Page_CNB2.php"><i class="fa fa-book" aria-hidden="true"></i> CNB2</a>
+      <li><i class="fa fa-book" aria-hidden="true"></i> CNB2
       <div class="sub-menu1">
           <ul>
-            <li><a href="CNB1/Mathématiques_CNB1.php">Mathématiques</a></li>
-            <li><a href="CNB1/Electronique_CNB1.php">Electronique</a></li>
-            <li><a href="CNB1/Mécanique_CNB1.php">Mécanique</a></li>
-            <li><a href="CNB1/Optique_CNB1.php">Optique</a></li>
-            <li><a href="CNB1/Chimie_CNB1.php">Chimie</a></li>
+            <li><a href="../CNB2/Maths_CNB2.php">Mathématiques</a></li>
+            <li><a href="../CNB2/Info_CNB2.php">Informatique</a></li>
+            <li><a href="../CNB2/Aquisition_CNB2.php">Aquisition de données</a></li>
+            <li><a href="../CNB2/Electrostat_CNB2.php">Electrostatique</a></li>
+            <li><a href="../CNB2/Magnetostat_CNB2.php">Magnétostatique</a></li>
+            <li><a href="../CNB2/Physique_CNB2.php">Physique et société</a></li>
+            <li><a href="../CNB2/PhysioA_CNB2.php">Physiologie Animale</a></li>
+            <li><a href="../CNB2/Electromag_CNB2.php">Electromagnétisme</a></li>
+            <li><a href="../CNB2/PhysioVeg_CNB2.php">Physiologie Végétale</a></li>
+            <li><a href="../CNB2/Microbio_CNB2.php">Microbiologie</a></li>
+            <li><a href="../CNB2/Sol_CNB2.php">Science du sol</a></li>
           </ul>
         <div>
+          
     </li>
       <li><a href="../Page_CNB3.php"><i class="fa fa-book" aria-hidden="true"></i> CNB3</a>
       <div class="sub-menu1">

@@ -13,7 +13,7 @@ session_start();
 
     <?php include("../includes/headerR.php")?><br>
     <body>
-        <?php include("../includes/Nav_matieres.php")?>
+        <?php include("../includes/Nav_matieres_CNB1.php")?>
         <h1 class="titre">DS d'Electronique</h1>
         <div class="contener_années">
             <div class="bloc_année"><a href="DS_electronique_2018-2019.php">2018-2019</a></div>
