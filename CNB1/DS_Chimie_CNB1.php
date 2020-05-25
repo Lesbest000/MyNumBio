@@ -14,7 +14,7 @@ session_start();
     <?php include("../includes/headerR.php")?>
     <body>
 
-    <div class="contener_gauche">
+        <div class="contener_gauche">
             <div class="bloc_gauche"><a href="Mathematiques_CNB1.php">Mathématiques</a></div>
             <div class="bloc_gauche"><a href="Electronique_CNB1.php">Electronique</a></div>
             <div class="bloc_gauche"><a href="Mecanique_CNB1.php">Mécanique</a></div>
@@ -24,8 +24,13 @@ session_start();
 
         <h1 class="titre">DS de Chimie</h1>
 
+        <div class="contener_centre_matières">
+            <div class="bloc_année"><a href="2018-2019.php">2018-2019</a></div>
+            <div class="bloc_année"><a href="2019-2020.php">2019-2020</a></div>
+        </div>
 
-        </body>
+
+    </body>
 
     <?php include("../includes/footer.php")?>
 </html>

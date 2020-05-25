@@ -155,7 +155,6 @@ a:hover {
 }
 .contener_gauche a {
     display: block ;
-    color: #fff ;
     text-align: center ;
     text-decoration: none ;
     padding: 4px 0 ;
@@ -170,6 +169,7 @@ a:hover {
     margin: auto;
     width: 70%;
     padding: 5px 10px;
+    height: 300px;
 }
 
 .centre{
@@ -223,12 +223,20 @@ body
     background-repeat: no-repeat;
 }
 
+
 .contener_centre_matières {
     display: flex;
     flex-direction: column;
-    justify-content: space-around;
-    align-items: center;
+    justify-content: center;
+    align-items: space-around;
+    height: 400px;  
+    text-align: center;
+    width: 200px;
+    margin: 0px;
+    padding: 0px;
+    /*list-style: none;*/
 }
+
 
 .slideshow {
     width: 300px;
@@ -248,3 +256,13 @@ body
   .slideshow li {
     float: left;
   }
+
+.bloc_année a{
+    color: white;
+    margin:10px;
+    font-size: 175%;
+}
+
+.bloc_année a:hover{
+    color:blue;
+}

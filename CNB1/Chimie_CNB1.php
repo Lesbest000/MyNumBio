@@ -24,9 +24,9 @@ session_start();
         </div>
         <h1 class="titre">Chimie CNB1</h1>
         <div class="contener_type_épreuve">
-            <div class="bloc_type_épreuve"><a href="Chimie_CNB1/Quizz_Chimie_CNB1.php">Quizz</a></div>
-            <div class="bloc_type_épreuve"><a href="Chimie_CNB1/DS_Chimie_CNB1.php">DS</a></div>
-            <div class="bloc_type_épreuve"><a href="Chimie_CNB1/Partiel_Chimie_CNB1.php">Partiel</a></div>
+            <div class="bloc_type_épreuve"><a href="Quizz_Chimie_CNB1.php">Quizz</a></div>
+            <div class="bloc_type_épreuve"><a href="DS_Chimie_CNB1.php">DS</a></div>
+            <div class="bloc_type_épreuve"><a href="Partiel_Chimie_CNB1.php">Partiel</a></div>
         </div>
     </body>
 
