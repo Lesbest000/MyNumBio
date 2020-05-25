@@ -1,3 +1,9 @@
+<?php
+session_start();
+?>
+
+<!DOCTYPE html>
+<html>
 <!DOCTYPE html>
 <html>
     <head>
@@ -6,7 +12,7 @@
         <title>Chimie CNB1</title>
     </head>
 
-    <?php include("header_matières_CNB1.php")?>
+    <?php include("../headrR.php")?>
     <body>
         <h1 class="titre">Chimie CNB1</h1>
         

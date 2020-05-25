@@ -1,14 +1,19 @@
+<?php
+session_start();
+?>
+
 <!DOCTYPE html>
+<html><!DOCTYPE html>
 <html>
     <head>
         <meta charset="utf-8" />
         <link rel="stylesheet" href="../Style.css" />
-        <title>Mécanique CNB1</title>
+        <title>Mécanique</title>
     </head>
 
-    <?php include("header_matières_CNB1.php")?>
+    <?php include("../includes/headerR.php")?>
     <body>
-        <h1 class="titre">Mécanique CNB1</h1>
+        <h1 class="titre">Mécanique</h1>
         
         <div class="contener_gauche">
             <div class="bloc_gauche"><a href="Mathématiques_CNB1.php">Mathématiques</a></div>

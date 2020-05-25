@@ -6,7 +6,7 @@
         <title>Optique CNB1</title>
     </head>
 
-    <?php include("header_matières_CNB1.php")?>
+    <?php include("../headerR.php")?>
     <body>
         <h1 class="titre">Optique CNB1</h1>
         
