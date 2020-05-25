@@ -36,11 +36,8 @@ $_SESSION['prenom'] =$prenom;
 
 //Connexion a la bdd/////////////////////////////////////////////////////////
 
-$db_host = "127.0.0.1";
-$db_user = "root";
-$db_pass = "";
-$db_name = "test";
 $db_table="utilisateur";
+include("../bdd.php");
 ////////////////////////////////////////////////////////////////////////////
 $link = mysqli_connect ($db_host,$db_user,$db_pass,$db_name);
 

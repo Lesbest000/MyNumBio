@@ -19,7 +19,10 @@ $nom_php="depot.php"; //ne pas oublier de changer dans forms x2
 
 
 //Connexion a la bdd
-include("bdd.php");
+$db_table_s="sujet"; //nom de la table de sujets
+$db_table_c="corrige"; //nom de la table de corrigés
+include("../../bdd.php");
+
 ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
 
