@@ -12,7 +12,7 @@ session_start();
         <title>Chimie CNB1</title>
     </head>
 
-    <?php include("../headrR.php")?>
+    <?php include("../headerR.php")?>
     <body>
         <h1 class="titre">Chimie CNB1</h1>
         
