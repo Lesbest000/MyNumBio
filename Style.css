@@ -168,8 +168,10 @@ a:hover {
     flex-wrap: nowrap;
     margin: auto;
     width: 70%;
-    padding: 5px 10px;
-    height: 300px;
+    padding-left:  30px;
+    padding-right: 30px;
+    padding-top: 50px;
+    padding-bottom:350px;
 }
 
 .centre{
@@ -195,7 +197,6 @@ text-decoration: none;
 font-size: 150%;
 text-align: justify;
 }
-
 
 
 .bloc_type_épreuve a:hover{
@@ -224,20 +225,6 @@ body
 }
 
 
-.contener_centre_matières {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: space-around;
-    height: 400px;  
-    text-align: center;
-    width: 200px;
-    margin: 0px;
-    padding: 0px;
-    /*list-style: none;*/
-}
-
-
 .slideshow {
     width: 300px;
     height: 300px;
@@ -259,10 +246,27 @@ body
 
 .bloc_année a{
     color: white;
-    margin:10px;
     font-size: 175%;
+}
+
+.bloc_année{
+    margin:20px;
 }
 
 .bloc_année a:hover{
     color:blue;
+}
+
+.contener_années {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: justify;  
+    text-align: center;
+    width: 83%;
+    margin: 0px;
+    padding-top: 50px;
+    padding-bottom:450px;
+    flex-wrap: nowrap;
+    /*list-style: none;*/
 }

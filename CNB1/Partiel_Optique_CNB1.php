@@ -11,19 +11,17 @@ session_start();
         <title>Partiel d'Optique</title>
     </head>
 
-    <?php include("../includes/headerR.php")?>
+    <?php include("../includes/headerR.php")?><br>
     <body>
         
-        <div class="contener_gauche">
-            <div class="bloc_gauche"><a href="Mathématiques_CNB1.php">Mathématiques</a></div>
-            <div class="bloc_gauche"><a href="Electronique_CNB1.php">Electronique</a></div>
-            <div class="bloc_gauche"><a href="Mécanique_CNB1.php">Mécanique</a></div>
-            <div class="bloc_gauche_actuel"><a href="Optique_CNB1.php">Optique</a></div>
-            <div class="bloc_gauche"><a href="Chimie_CNB1.php">Chimie</a></div>
-        </div>
+        <?php include("../includes/Nav_matieres.php")?>
 
         <h1 class="titre">Partiel d'Optique</h1>
-        
+        <div class="contener_années">
+            <div class="bloc_année"><a href="partiel_optique_2018-2019.php">2018-2019</a></div>
+            <div class="bloc_année"><a href="partiel_optique_2019-2020.php">2019-2020</a></div>
+        </div>
+
         </body>
 
     <?php include("../includes/footer.php")?>

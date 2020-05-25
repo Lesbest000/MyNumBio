@@ -21,14 +21,19 @@ echo $_SESSION['prenom']." ".$_SESSION['nom'];
   <div class="menu-bar">
     <ul>
       <li class="active"><a href="../Accueil.php"><i class="fa fa-home" aria-hidden="true"></i> ACCUEIL</a></li>
-      <li><a href="../Page_CNB1.php"><i class="fa fa-book" aria-hidden="true"></i> CNB1</a>
+      <li><i class="fa fa-book" aria-hidden="true"></i> CNB1
         <div class="sub-menu1">
           <ul>
             <li><a href="../CNB1/Mathematiques_CNB1.php">Mathématiques</a></li>
             <li><a href="../CNB1/Electronique_CNB1.php">Electronique</a></li>
             <li><a href="../CNB1/Mecanique_CNB1.php">Mécanique</a></li>
             <li><a href="../CNB1/Optique_CNB1.php">Optique</a></li>
+            <li><a href="../CNB1/Thermo_CNB1.php">Thermodynamique</a></li>
             <li><a href="../CNB1/Chimie_CNB1.php">Chimie</a></li>
+            <li><a href="../CNB1/Biochimie_CNB1.php">Biochimie</a></li>
+            <li><a href="../CNB1/BioA_CNB1.php">Biologie Animale</a></li>
+            <li><a href="../CNB1/BioVeg_CNB1.php">Biologie Végétale</a></li>
+            <li><a href="../CNB1/BioCell_CNB1.php">Biologie Cellulaire</a></li>
           </ul>
         <div>
     </li>

@@ -8,18 +8,20 @@ session_start();
     <head>
         <meta charset="utf-8" />
         <link rel="stylesheet" href="../Style.css" />
-        <title>DS d'Optique</title>
+        <title>Partiel de Biologie Végétale</title>
     </head>
 
     <?php include("../includes/headerR.php")?><br>
     <body>
         <?php include("../includes/Nav_matieres.php")?>
-        <h1 class="titre">DS d'Optique</h1>
+        
+        <h1 class="titre">Partiel de Biologie Végétale</h1>
         <div class="contener_années">
-            <div class="bloc_année"><a href="DS_optique_2018-2019.php">2018-2019</a></div>
-            <div class="bloc_année"><a href="2019-2020.php">2019-2020</a></div>
+            <div class="bloc_année"><a href="partiel_bioVeg_2018-2019.php">2018-2019</a></div>
+            <div class="bloc_année"><a href="partiel_bioVeg_2019-2020.php">2019-2020</a></div>
         </div>
 
+        
 
         </body>
 

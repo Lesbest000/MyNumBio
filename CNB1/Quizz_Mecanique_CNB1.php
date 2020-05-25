@@ -11,18 +11,16 @@ session_start();
         <title>Quizz de Mécanique</title>
     </head>
 
-    <?php include("../includes/headerR.php")?>
+    <?php include("../includes/headerR.php")?><br>
     <body>
-        <div class="contener_gauche">
-            <div class="bloc_gauche"><a href="Mathematiques_CNB1.php">Mathématiques</a></div>
-            <div class="bloc_gauche"><a href="Electronique_CNB1.php">Electronique</a></div>
-            <div class="bloc_gauche_actuel"><a href="Mecanique_CNB1.php">Mécanique</a></div>
-            <div class="bloc_gauche"><a href="Optique_CNB1.php">Optique</a></div>
-            <div class="bloc_gauche"><a href="Chimie_CNB1.php">Chimie</a></div>
-        </div>
+        <?php include("../includes/Nav_matieres.php")?>
 
         <h1 class="titre">Quizz de Mécanique</h1>
-        
+        <div class="contener_années">
+            <div class="bloc_année"><a href="quizz_mecanique_2018-2019.php">2018-2019</a></div>
+            <div class="bloc_année"><a href="quizz_mecanique_2019-2020.php">2019-2020</a></div>
+        </div>
+
         
         </body>
 
