@@ -146,13 +146,21 @@ a:hover {
 }
 
 .contener_gauche{
-    display: flex;
-    flex-direction: column;
-    justify-content: space-around;
+    float: left;
     align-items: flex-start;
-    width: 20%;
+    width: 200px;
     border: solid white;
     margin: 0px;
+    padding: 0px;
+    list-style: none;
+}
+.contener_gauche a {
+    display: block ;
+    color: #fff ;
+    text-align: center ;
+    text-decoration: none ;
+    padding: 4px 0 ;
+    line-height: 1em ;
 }
 
 .contener_type_épreuve{
