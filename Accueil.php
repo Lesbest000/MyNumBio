@@ -86,7 +86,9 @@ session_start();
 
     <?php include("includes/header.php")?>
     <body>
+        <p>&nbsp;</p>
         <h1 class="titre">Bonjour et bienvenue aux CNB!</h1>
+        <p>&nbsp;</p>
         <!--<div class="centre">
             <script language="javascript">
                 StartAnim();
@@ -105,6 +107,7 @@ session_start();
         <img border="0" src="img/plaquette_isen.jpg" width="400" height="200" alt="erreur d'image" hspace="0">
         </p></marquee>
         </div>
+        <p>&nbsp;</p>
     </body>
 
     <?php include("includes/footer.php")?>
