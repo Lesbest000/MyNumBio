@@ -12,9 +12,9 @@ session_start();
     <body>
         
         <div class="contener_gauche">
-            <div class="bloc_gauche_actuel"><a href="Mathématiques_CNB1.php">Mathématiques</a></div>
+            <div class="bloc_gauche_actuel"><a href="Mathematiques_CNB1.php">Mathématiques</a></div>
             <div class="bloc_gauche"><a href="Electronique_CNB1.php">Electronique</a></div>
-            <div class="bloc_gauche"><a href="Mécanique_CNB1.php">Mécanique</a></div>
+            <div class="bloc_gauche"><a href="Mecanique_CNB1.php">Mécanique</a></div>
             <div class="bloc_gauche"><a href="Optique_CNB1.php">Optique</a></div>
             <div class="bloc_gauche"><a href="Chimie_CNB1.php">Chimie</a></div>
         </div>
@@ -22,9 +22,9 @@ session_start();
         <h1 class="titre">Mathématiques CNB1</h1>
 
         <div class="contener_type_épreuve">
-            <div class="bloc_type_épreuve"><a href="Quizz_Mathématiques_CNB1.php">Quizz</a></div>
-            <div class="bloc_type_épreuve"><a href="DS_Mathématiques_CNB1.php">DS</a></div>
-            <div class="bloc_type_épreuve"><a href="Partiel_Mathématiques_CNB1.php">Partiel</a></div>
+            <div class="bloc_type_épreuve"><a href="Quizz_Mathematiques_CNB1.php">Quizz</a></div>
+            <div class="bloc_type_épreuve"><a href="DS_Mathematiques_CNB1.php">DS</a></div>
+            <div class="bloc_type_épreuve"><a href="Partiel_Mathematiques_CNB1.php">Partiel</a></div>
         </div><br>
     </body>
     <?php include("../includes/footer.php")?>

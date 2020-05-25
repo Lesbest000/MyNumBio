@@ -24,9 +24,9 @@ echo $_SESSION['prenom']." ".$_SESSION['nom'];
       <li><a href="../Page_CNB1.php"><i class="fa fa-book" aria-hidden="true"></i> CNB1</a>
         <div class="sub-menu1">
           <ul>
-            <li><a href="../CNB1/Mathématiques_CNB1.php">Mathématiques</a></li>
+            <li><a href="../CNB1/Mathematiques_CNB1.php">Mathématiques</a></li>
             <li><a href="../CNB1/Electronique_CNB1.php">Electronique</a></li>
-            <li><a href="../CNB1/Mécanique_CNB1.php">Mécanique</a></li>
+            <li><a href="../CNB1/Mecanique_CNB1.php">Mécanique</a></li>
             <li><a href="../CNB1/Optique_CNB1.php">Optique</a></li>
             <li><a href="../CNB1/Chimie_CNB1.php">Chimie</a></li>
           </ul>

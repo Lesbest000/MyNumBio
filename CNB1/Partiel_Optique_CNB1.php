@@ -13,7 +13,6 @@ session_start();
 
     <?php include("../includes/headerR.php")?>
     <body>
-        <h1 class="titre">Partiel d'Optique</h1>
         
         <div class="contener_gauche">
             <div class="bloc_gauche"><a href="Mathématiques_CNB1.php">Mathématiques</a></div>
@@ -22,3 +21,10 @@ session_start();
             <div class="bloc_gauche_actuel"><a href="Optique_CNB1.php">Optique</a></div>
             <div class="bloc_gauche"><a href="Chimie_CNB1.php">Chimie</a></div>
         </div>
+
+        <h1 class="titre">Partiel d'Optique</h1>
+        
+        </body>
+
+    <?php include("../includes/footer.php")?>
+</html>
