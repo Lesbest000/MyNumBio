@@ -1,6 +1,8 @@
+<?php
+session_start();
+?>
 <!DOCTYPE html>
 <html>
-    <head>
         <meta charset="utf-8" />
         <link rel="stylesheet" href="../Style.css" />
         <title>Mathématiques CNB1</title>
@@ -16,7 +18,9 @@
             <div class="bloc_gauche"><a href="Optique_CNB1.php">Optique</a></div>
             <div class="bloc_gauche"><a href="Chimie_CNB1.php">Chimie</a></div>
         </div>
+
         <h1 class="titre">Mathématiques CNB1</h1>
+
         <div class="contener_type_épreuve">
             <div class="bloc_type_épreuve"><a href="Quizz_Mathématiques_CNB1.php">Quizz</a></div>
             <div class="bloc_type_épreuve"><a href="DS_Mathématiques_CNB1.php">DS</a></div>
