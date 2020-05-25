@@ -3,11 +3,14 @@ display: flex;
 justify-content: space-around;
 
 }
+
 #depot{
 padding: 10 px;
 padding: 20px;
 border-radius: 0.9%;
-border: 2px solid #cbcbcb;
+border: 1px solid white;
+background-color: white;
+
     
     }
 #sujet{
@@ -17,7 +20,8 @@ margin: 15px auto;
 display:block;
 float: left;
 overflow: scroll;
-
+background-color: white;
+color: black;
 }
 #correction{
 width: 100%;
@@ -26,6 +30,8 @@ margin: 15px auto;
 display:block;
 float:right;
 overflow: scroll;
+background-color: white;
+color: black;
 
 }
 
@@ -68,15 +74,7 @@ font-weight: bolder;
 
 
 }
-#img_div:hover{
-    width: 80%;
-    padding: 5px;
-    margin: 15px auto;
-    border: transparent;
-    color: bisque;
-    cursor: pointer;
-    
-    }
+
 #img_div:after{
 content: "";
 display: block;

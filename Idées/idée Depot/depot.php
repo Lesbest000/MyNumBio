@@ -1,6 +1,7 @@
 <?php
 session_start();
 $email=$_SESSION['email'];
+$id=$_SESSION['id'];
 $timestamp = date("Y-m-d H:i:s");
 
 //Pour trier les épreuves
@@ -9,44 +10,32 @@ $type="";
 
 //Les noms de fichiers//////IMPORTANT/////////////////////////// Le chemin des fichiers (A remplir)////////////////////////////////////
 $fl_fichier="Depot";
-$fl_classe="";//CNB1/2/3
-$fl_matiere="";//Mathematiques...
-$fl_type="";//Quiz / DS/ Partiel
-$fl_annee="";//2019-2020
+$fl_classe="CNB1";//CNB1/2/3
+$fl_matiere="Mathematiques";//Mathematiques...
+$fl_type="DS";//Quiz / DS/ Partiel
+$fl_annee="2019-2020";//2019-2020
 
 $nom_php="depot.php"; //ne pas oublier de changer dans forms x2
 
-$matiere_page="mecanique";//en minuscule avec _
-$type_epreuve="ds";//en minuscule avec _
-$classe="cnb1";//cnb1,2,3
-$annee="2019-2020";//2018-2019
 
-//Connexion a la bdd(A remplir)
-
-$db_host = "127.0.0.1";
-$db_user = "root";
-$db_pass = "";
-$db_name = "test"; //nom de la bdd
+//Connexion a la bdd
 $db_table_s="sujet"; //nom de la table de sujets
 $db_table_c="corrige"; //nom de la table de corrigés
+include("../../bdd.php");
+
 ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-$link = mysqli_connect ($db_host,$db_user,$db_pass,$db_name);
+
 
   // Initialisation de la variable
   $msg = "";
 
 // Si click sur depot sujet////////////////////////////
 if (isset($_POST['upload_s'])) {
-	if (empty($_POST['matiere']) or empty($_POST['type'])  or empty($_POST['classe']) or empty($_POST['annee'])) {
-		echo "<script type='text/javascript'>alert('Veuillez saisir tout les champs nécessaires');location='$nom_php'</script>";
-		die();
-
-	}else{
-		$matiere=$_POST['matiere'];
-		$type=$_POST['type'];
-		$classe=$_POST['classe'];
-		$annee=$_POST['annee'];
-	}
+		$matiere=$fl_matiere;
+		$type=$fl_type;
+		$classe=$fl_classe;
+		$annee=$fl_annee;
+	
     echo "<script type='text/javascript'>alert('Êtes-vous sûr de vouloir déposer ce fichier ?')</script>";
     // Nom image 
     $file = $_FILES['file']['name'];
@@ -62,7 +51,7 @@ if (isset($_POST['upload_s'])) {
 
     
   	if (move_uploaded_file($_FILES['file']['tmp_name'], $target)) {
-    $sql = "INSERT INTO $db_table_s (file, file_text, path,author,time,type,matiere,classe,annee) VALUES ('$file', '$file_text','$target','$email','$timestamp','$type','$matiere','$classe','$annee')";
+    $sql = "INSERT INTO $db_table_s (file, file_text, path,author,time,type,matiere,classe,annee) VALUES ('$file', '$file_text','$target','$id','$timestamp','$fl_type','$fl_matiere','$fl_classe','$fl_annee')";
   	// Requete
       mysqli_query($link, $sql);
       $msg= "Votre document a été déposé.";
@@ -73,21 +62,16 @@ if (isset($_POST['upload_s'])) {
   	}
 }
 //Requete pour filtrage
-  $result_s = mysqli_query($link, "SELECT * FROM $db_table_s WHERE matiere = '$matiere_page' && type='$type_epreuve'&& classe='$classe'");
+  $result_s = mysqli_query($link, "SELECT * FROM $db_table_s WHERE matiere = '$fl_matiere' && type='$fl_type'&& classe='$fl_classe'");
   
  //Si click sur depot corrigé///////////////////
 
 if (isset($_POST['upload_c'])) {
-    if (empty($_POST['matiere']) or empty($_POST['type']) or empty($_POST['classe']) or empty($_POST['annee'])) {
-		echo "<script type='text/javascript'>alert('Veuillez saisir tout les champs nécessaires');location='$nom_php'</script>";
-		die();
+	$matiere=$fl_matiere;
+	$type=$fl_type;
+	$classe=$fl_classe;
+	$annee=$fl_annee;
 
-	}else{
-		$matiere=$_POST['matiere'];
-		$type=$_POST['type'];
-		$classe=$_POST['classe'];
-		$annee=$_POST['annee'];
-	}   
     echo "<script type='text/javascript'>alert('Êtes-vous sûr de vouloir déposer ce fichier ?')</script>";
     // Nom image 
     $file = $_FILES['file']['name'];
@@ -100,7 +84,7 @@ if (isset($_POST['upload_c'])) {
 
     
   	if (move_uploaded_file($_FILES['file']['tmp_name'], $target)) {
-    	$sql = "INSERT INTO $db_table_c (file, file_text, path,author,time,type,matiere,classe,annee) VALUES ('$file', '$file_text','$target','$email','$timestamp','$type','$matiere','$classe','$annee')";
+    	$sql = "INSERT INTO $db_table_c (file, file_text, path,author,time,type,matiere,classe,annee) VALUES ('$file', '$file_text','$target','$id','$timestamp','$fl_type','$fl_matiere','$fl_classe','$fl_annee')";
   	// Requete
 		mysqli_query($link, $sql);
 		$msg= "Votre document a été déposé.";
@@ -112,7 +96,7 @@ if (isset($_POST['upload_c'])) {
 }
 
 //Requete pour filtrage
-$result_c = mysqli_query($link, "SELECT * FROM $db_table_c WHERE matiere = '$matiere_page' && type='$type_epreuve'&& classe='$classe'");
+$result_c = mysqli_query($link, "SELECT * FROM $db_table_c WHERE matiere = '$fl_matiere' && type='$fl_type'&& classe='$fl_classe'");
 ?>
 
 
@@ -121,10 +105,11 @@ $result_c = mysqli_query($link, "SELECT * FROM $db_table_c WHERE matiere = '$mat
 <head>
 <title>Dêpot <?php echo"$type $matiere"?></title>
 <link rel="stylesheet" href="style_depot.css">
+<link rel="stylesheet" href="../../Style.css">
 </head>
 <body>
 <?php include("../../includes/header.php")?>
-    <?php echo"<h1>$fl_annee</h1>"?>
+    <?php echo"<h1>$fl_type $fl_matiere $fl_annee</h1><br>"?>
 <div id="depot_page">
 	<div id="depot">
 		<h1 style="text-align:center">Sujet</h1>	
@@ -135,12 +120,14 @@ $result_c = mysqli_query($link, "SELECT * FROM $db_table_c WHERE matiere = '$mat
 					while ($row = mysqli_fetch_array($result_s)) {
 
 						echo "<div id='img_div'>";
-						echo"<a href='$fl_fichier/$fl_classe/$fl_matiere/$fl_type/$fl_annee/$row[file]' target='_blank'>".$row['file']."</a>";  
+						echo"<a href='$fl_fichier/$fl_classe/$fl_matiere/$fl_type/$fl_annee/$row[file]' target='_blank'>".$row['file']."</a>";
 						echo "</div>";
 						echo "<div id='txt_div'>";
 						echo "<p>".$row['file_text']."</p>";
 						echo "</div>";
 					}
+
+
 				?>
 
 			</div>  
@@ -150,43 +137,7 @@ $result_c = mysqli_query($link, "SELECT * FROM $db_table_c WHERE matiere = '$mat
 		<div>
 			<input type="file" name="file" accept="application/pdf">	
 		</div>
-		<div>
-			<label>(*)</label>
-			<select name="matiere">
-				<option value="">-- Veuillez sélectionner la matière --</option>
-				<option value="mathematiques">Mathématiques</option>
-				<option value="mecanique">Mécanique</option>
-				<option value="optique">Optique</option>
-				<option value="chimie">Chimie</option>
-				<option value="biochimie">Biochimie</option>
-				<option value="biologie_cellulaire">Biologie Cellulaire</option>
-				<option value="biologie_animale">Biologie Animale</option>
-				<option value="thermodynamique">Thermodynamique</option>
-				<option value="physiologie_animale">Physiologie Animale</option>
-			</select> 
-				<label>(*)</label>
-			<select name="type">
-				<option value="">-- Type de l'épreuve--</option>
-				<option value="quiz">Quiz</option>
-				<option value="ds">DS</option>
-				<option value="partiel">Partiel</option>
-			</select>
-				<label>(*)</label>
-			<select name="classe">
-				<option value="">-- Classe--</option>
-				<option value="cnb1">CNB1</option>
-				<option value="cnb2">CNB2</option>
-				<option value="cnb3">CNB3</option>
-			</select> 
-			<label>(*)</label>
-			<select name="annee">
-				<option value="">-- Année--</option>
-				<option value="2018-2019">2018-2019</option>
-				<option value="2019-2020">2019-2020</option>
-				<option value="2020-2021">2020-2021</option>
-				<option value="2021-2022">2021-2022</option>
-			</select> 
-		</div>
+
 		<div>
 			<textarea text-align="center"id="text" cols="40" rows="4" name="file_text" placeholder="Décrivez l'épreuve..."></textarea>
 		</div>
@@ -208,11 +159,30 @@ $result_c = mysqli_query($link, "SELECT * FROM $db_table_c WHERE matiere = '$mat
 				while ($row = mysqli_fetch_array($result_c)) {
 
 					echo "<div id='img_div'>";
-					echo"<a href='$fl_fichier/$fl_classe/$fl_matiere/$fl_type/$fl_annee/$row[file]' target='_blank'>".$row['file']."</a>";  
+					echo"<a href='$fl_fichier/$fl_classe/$fl_matiere/$fl_type/$fl_annee/$row[file]' target='_blank'>".$row['file']."</a>";echo"<br><form method='POST'>
+					<input type=hidden name=file value=".$row['file'].">
+					<input type=hidden name=id value=".$row['author'].">
+					<input type=submit value=Supprimer name=supprimer >
+					</form>";   
 					echo "</div>";
 					echo "<div id='txt_div'>";
 					echo "<p>".$row['file_text']."</p>";
 					echo "</div>";
+				}
+				// supprimer record
+				if( isset( $_POST['supprimer'] ) ) {
+					$file_id=$_POST['id'];
+					if($id==$file_id){
+
+					$did = $_POST['file'];						
+					$result_sup =mysqli_query($link,"DELETE FROM corrige WHERE file='$did'");
+					echo "<script type='text/javascript'>alert('Êtes-vous sûr de vouloir le supprimer?')</script>";	
+					if($result_sup==false){
+						echo "<script type='text/javascript'>alert('Erreur de suppression')</script>";
+					}	
+				}else{
+					echo "<script type='text/javascript'>alert('Vous ne pouvez pas supprimer ce document')</script>";
+				}		
 				}
 			?>
   
@@ -222,43 +192,6 @@ $result_c = mysqli_query($link, "SELECT * FROM $db_table_c WHERE matiere = '$mat
 		<div id="deposer">
   			<div>
   				<input type="file" name="file" accept="application/pdf">
-			</div>
-			<div>
-				<label>(*)</label>
-			<select name="matiere">
-				<option value="">-- Veuillez sélectionner la matière --</option>
-				<option value="mathematiques">Mathématiques</option>
-				<option value="mecanique">Mécanique</option>
-				<option value="optique">Optique</option>
-				<option value="chimie">Chimie</option>
-				<option value="biochimie">Biochimie</option>
-				<option value="biologie_cellulaire">Biologie Cellulaire</option>
-				<option value="biologie_animale">Biologie Animale</option>
-				<option value="thermodynamique">Thermodynamique</option>
-				<option value="physiologie_animale">Physiologie Animale</option>
-			</select> 
-				<label>(*)</label>
-			<select name="type">
-				<option value="">-- Type de l'épreuve--</option>
-				<option value="quiz">Quiz</option>
-				<option value="ds">DS</option>
-				<option value="partiel">Partiel</option>
-			</select> 	  
-				<label>(*)</label>
-			<select name="classe">
-				<option value="">-- Classe--</option>
-				<option value="cnb1">CNB1</option>
-				<option value="cnb2">CNB2</option>
-				<option value="cnb3">CNB3</option>
-			</select>  
-			<label>(*)</label>
-			<select name="annee">
-				<option value="">-- Année--</option>
-				<option value="2018-2019">2018-2019</option>
-				<option value="2019-2020">2019-2020</option>
-				<option value="2020-2021">2020-2021</option>
-				<option value="2021-2022">2021-2022</option>
-			</select> 
 			</div>
   		<div>
 		<div>
