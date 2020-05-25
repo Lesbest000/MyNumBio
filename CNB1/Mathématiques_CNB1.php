@@ -6,7 +6,7 @@
         <title>Mathématiques CNB1</title>
     </head>
 
-    <?php include("includes/header.php")?>
+    <?php include("../includes/headerR.php")?>
     <body>
         
         <div class="contener_gauche">

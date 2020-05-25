@@ -6,7 +6,7 @@
         <title>Electronique CNB1</title>
     </head>
 
-    <?php include("../includes/header.php")?>
+    <?php include("../includes/headerR.php")?>
     <body>
         <h1 class="titre">Electronique CNB1</h1>
         
