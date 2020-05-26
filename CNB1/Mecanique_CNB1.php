@@ -7,7 +7,7 @@ session_start();
     <head>
         <meta charset="utf-8" />
         <link rel="stylesheet" href="../Style.css" />
-        <title>Mécanique</title>
+        <title>Mécanique CNB1</title>
     </head>
 
     <?php include("../includes/headerR.php")?>
@@ -15,7 +15,7 @@ session_start();
         
         <?php include("../includes/Nav_matieres_CNB1.php")?>
 
-        <h1 class="titre">Mécanique</h1>
+        <h1 class="titre">Mécanique CNB1</h1>
 
         <div class="contener_type_épreuve">
             <div class="bloc_type_épreuve"><a href="Quizz_Mecanique_CNB1.php">Quizz</a></div>
