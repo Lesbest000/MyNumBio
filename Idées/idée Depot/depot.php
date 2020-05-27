@@ -1,4 +1,5 @@
 <?php
+
 session_start();
 $email=$_SESSION['email'];
 $id=$_SESSION['id'];
@@ -109,6 +110,7 @@ $result_c = mysqli_query($link, "SELECT * FROM $db_table_c WHERE matiere = '$fl_
 </head>
 <body>
 <?php include("../../includes/header.php")?>
+<?php include("../../includes/Nav_matieres_CNB1.php")?>
     <?php echo"<h1>$fl_type $fl_matiere $fl_annee</h1><br>"?>
 <div id="depot_page">
 	<div id="depot">

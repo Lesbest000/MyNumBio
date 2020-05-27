@@ -109,7 +109,7 @@ $result_c = mysqli_query($link, "SELECT * FROM $db_table_c WHERE matiere = '$fl_
 <link rel="stylesheet" href="../Style.css">
 </head>
 <body>
-<?php include("../includes/header.php")?>
+<?php include("../includes/headerR.php")?>
 <?php include("../includes/Nav_matieres_CNB1.php")?>
     <?php echo"<h2 style='text-align:center;color:white;font-weight:bold'>$fl_type $fl_matiere $fl_annee</h2><br>"?>
 <div id="depot_page">
