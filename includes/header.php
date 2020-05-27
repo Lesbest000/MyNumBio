@@ -37,7 +37,7 @@ echo $_SESSION['prenom']." ".$_SESSION['nom'];
           </ul>
         <div>
     </li>
-      <li><a href="Page_CNB2.php"><i class="fa fa-book" aria-hidden="true"></i> CNB2</a>
+      <li><i class="fa fa-book" aria-hidden="true"></i> CNB2
       <div class="sub-menu1">
           <ul>
             <li><a href="CNB2/Maths_CNB2.php">Mathématiques</a></li>

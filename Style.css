@@ -172,7 +172,7 @@ a:hover {
     padding-right: 30px;
     padding-top: 100px;
     padding-bottom:450px;
-    border: solid white;
+    
 }
 
 .centre{
@@ -266,8 +266,8 @@ body
     text-align: center;
     width: 83%;
     margin: 0px;
-    padding-top: 50px;
-    padding-bottom:450px;
+    padding-top: 100px;
+    padding-bottom:550px;
     flex-wrap: nowrap;
     /*list-style: none;*/
 }
