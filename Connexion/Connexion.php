@@ -31,15 +31,14 @@
                     
                     <select name="question" style="width:300px">
 	            <option value="">-- Veuillez choisir votre question de sécurité --</option>
-	            <option value="Animal">Quel est le nom de votre premier animal de compagnie ?</option>
-	            <option value="Rue">Quel est le nom de la rue dans laquelle vous avez grandi ?</option>
-	            <option value="Surnom">Quel était votre surnom d'enfance ?</option>
-                <option value="Ecole">Quel était le nom de votre école primaire ?</option>
-                <option value="Anniversaire">Quel est votre date d'anniversaire ?</option>
+	            <option value="Quel est le nom de votre premier animal de compagnie ?">Quel est le nom de votre premier animal de compagnie ?</option>
+	            <option value="Quel est le nom de la rue dans laquelle vous avez grandi ?">Quel est le nom de la rue dans laquelle vous avez grandi ?</option>
+	            <option value="Quel était votre surnom d'enfance ?">Quel était votre surnom d'enfance ?</option>
+                <option value="Quel était le nom de votre école primaire ?">Quel était le nom de votre école primaire ?</option>
+                <option value=">Quel est votre date d'anniversaire ?">Quel est votre date d'anniversaire ?</option>
 
 	          </select>
                 <input type="reponse" id="reponse" name="reponse" class="input-field" placeholder="Réponse à la question" required>
-                    <p>&thinsp;</p>
                     <p>&thinsp;</p>
                     <button type="submit" name="submit" class="submit-btn">S'inscrire</button>
             </form>

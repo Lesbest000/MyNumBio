@@ -17,6 +17,8 @@ $email = $_POST['email'];
 $password = $_POST['password_1'];
 $email = mb_strtolower($email);
 $password=md5($password_1);
+$question=$_POST['question'];
+$reponse=$_POST['reponse'];
 
 //isole nom prenom
 $emailarray  = explode('@',$email);
@@ -67,7 +69,10 @@ if(mysqli_num_rows($req_e) > 0){
    location='Connexion.php'</script>";
    die();	
  }else{
-$sql="INSERT INTO `$db_table`(`email`, `password`) VALUES('$email', '$password')";  
+$sql="INSERT INTO `$db_table`(`email`, `password`) VALUES('$email', '$password')";
+$sql_q = "INSERT INTO `securite`(`email`,`question`, `reponse`) VALUES('$email', '$question', '$reponse')";
+$req_e = mysqli_query($link,$sql_q);
+
 $inscription=mysqli_query($link,$sql);
 
 echo "<script type='text/javascript'>alert('Vous êtes inscrit en tant que $prenom $nom');

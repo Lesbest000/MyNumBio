@@ -10,7 +10,7 @@
   <body>
 <h1>MyNumBio</h1> <br>
 <header class="header-global">
-  <a href="Connexion/deconnexion.php" style="text-align:right">Se déconnecter</a>
+  <a href="../Connexion/deconnexion.php" style="text-align:right">Se déconnecter</a>
   <?php
 echo"<br>";
 echo $_SESSION['email'];
