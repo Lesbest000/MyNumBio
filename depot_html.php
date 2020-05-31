@@ -57,7 +57,7 @@
 				</div>  
 				
 	
-				<form method="POST" action="DS_bioA_CNB1_2018-2019.php" enctype="multipart/form-data">
+	<?php	echo"	<form method='POST' action=$nom_php enctype='multipart/form-data'>"?>
 				<input type="hidden" name="size" value="1000000">
 				<div id="deposer">
 					<div>
@@ -71,7 +71,7 @@
 						<button type="submit" name="upload_s" style="background-color:lightblue">Déposer</button> 
 					</div> 
 					<div>
-				<p>Ne pas mettre d'espaces dans le nom du fichier</p>
+				<p>Veuillez ne pas mettre d'espaces dans le nom du fichier</p>
 				</div>
 				<div>
 				<p style="font-weight:bold">"date_Matiere_NOM.pdf" (040520_Optique_DUPONT.pdf)</p>
@@ -131,7 +131,7 @@
 
 
 
-			<form method="POST" action="DS_bioA_CNB1_2018-2019.php" enctype="multipart/form-data">
+			<?php echo"<form method='POST' action=$nom_php enctype='multipart/form-data'>"?>
 				<input type="hidden" name="size" value="1000000">  
 				<div id="deposer">
 					<div>
@@ -145,7 +145,7 @@
 					<button type="submit" name="upload_c" style="background-color:lightblue">Déposer</button>
 				</div>
 				<div>
-				<p>Ne pas mettre d'espaces dans le nom du fichier</p>
+				<p>Veuillez ne pas mettre d'espaces dans le nom du fichier</p>
 				</div>
 				<div>
 				<p style="font-weight:bold">"date_Matiere_NOM.pdf" (040520_Optique_DUPONT.pdf)</p>
@@ -161,6 +161,5 @@
 	</div>	
 	</div>
 		</body>
-	<?php include("../includes/footer.php")?>
 
 </html>

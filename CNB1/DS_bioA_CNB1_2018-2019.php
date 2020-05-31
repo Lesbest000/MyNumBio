@@ -12,7 +12,7 @@ $type="";
 //Les noms de fichiers//////IMPORTANT/////////////////////////// Le chemin des fichiers (A remplir)////////////////////////////////////
 $fl_fichier="Depot";
 $fl_classe="CNB1";//CNB1/2/3
-$fl_matiere="Biologie_Animale";//Mathematiques...
+$fl_matiere="Biologie Animale";//Mathematiques...
 $fl_type="DS";//Quiz / DS/ Partiel
 $fl_annee="2018-2019";//2019-2020
 
