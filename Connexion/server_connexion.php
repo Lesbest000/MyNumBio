@@ -32,7 +32,7 @@ $result = mysqli_query($link, "SELECT * FROM $db_table WHERE email = '$email'");
 while ($row = mysqli_fetch_array($result)) {
 $id=$row['id'];
  }
-$_SESSION['id'] = $id;
+$_SESSION['id']=$id;
 //Si erreur de connexion
 
 if($link==false){
@@ -72,7 +72,7 @@ if($row['email']== $email && $row['password'] == $password){
 
 // Check, if username session is NOT set then this page will jump to login page
       if (!isset($_SESSION['email'])) {
-         echo "<script type='text/javascript'>alert('Nope);
+         echo "<script type='text/javascript'>alert('Nope');
          location='Connexion.php'</script>";
       }
  

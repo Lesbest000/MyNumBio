@@ -10,16 +10,27 @@
   <body>
 <h1>MyNumBio</h1> <br>
 <header class="header-global">
+<?php
+
+include('admin.php');
+if (true === in_array($_SESSION['email'], $admin_email)){
+ echo"<div style='float:right;color:white;font-weight:bold;background-color:white;width:210px;padding:5px;margin:5px;'>"; 
+ echo "<a href='recapitulatif.php'target='_blank'>Voir la liste de tous les dépôts</a>";
+ echo"</div>"; 
+}
+
+?>
   <a href="Connexion/deconnexion.php" style="text-align:right;color:white;font-weight:bold">Se déconnecter</a>
   <?php
 echo"<br>";
 echo"<p>&thinsp;</p>";
-echo"<p style='text-align:center;color:white;background-color:rgb(92, 92, 238);;width:250px;padding:5px;margin:5px;border-radius:5%'>";
+echo"<p style='text-align:center;color:white;background-color:rgb(92, 92, 238);width:250px;padding:5px;margin:5px;border-radius:5%'>";
 echo $_SESSION['email'];
 echo"<br>";
 echo $_SESSION['prenom']." ".$_SESSION['nom'];
 echo"</p>";
 echo"<p>&thinsp;</p>";
+
 ?>
     
   <div class="menu-bar">
