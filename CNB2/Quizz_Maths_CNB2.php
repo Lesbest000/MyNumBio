@@ -17,7 +17,7 @@ session_start();
 
         <h1 class="titre">Quizz de Mathématiques CNB2</h1>
         <div class="contener_années">
-            <div class="bloc_année"><a href="quizz_maths_2019-2020.php">2019-2020</a></div>
+            <div class="bloc_année"><a href="quizz_maths_CNB2_2019-2020.php">2019-2020</a></div>
         </div>
 
         </body>

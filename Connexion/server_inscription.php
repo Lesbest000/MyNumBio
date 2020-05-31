@@ -1,4 +1,4 @@
-<?php
+<?php ///voir tout ce qui est en rapport avec les question de securite en //
 //Commencer session
 session_start();
 $_SESSION['email'] = $_POST['email'];
@@ -17,8 +17,9 @@ $email = $_POST['email'];
 $password = $_POST['password_1'];
 $email = mb_strtolower($email);
 $password=md5($password_1);
-$question=$_POST['question'];
-$reponse=$_POST['reponse'];
+
+/*$question=$_POST['question'];
+$reponse=$_POST['reponse'];*/
 
 //isole nom prenom
 $emailarray  = explode('@',$email);
@@ -46,8 +47,9 @@ $link = mysqli_connect ($db_host,$db_user,$db_pass,$db_name);
 $result = mysqli_query($link, "SELECT * FROM $db_table WHERE email = '$email'");
 while ($row = mysqli_fetch_array($result)) {
 $id=$row['id'];
+
  }
-$_SESSION['id'] = $id;
+$id=$_SESSION['id'];
 ////////////////////////////////////////////////////////////////////////////////////////////////////////
 //Si erreur de connexion
 
@@ -70,8 +72,8 @@ if(mysqli_num_rows($req_e) > 0){
    die();	
  }else{
 $sql="INSERT INTO `$db_table`(`email`, `password`) VALUES('$email', '$password')";
-$sql_q = "INSERT INTO `securite`(`email`,`question`, `reponse`) VALUES('$email', '$question', '$reponse')";
-$req_e = mysqli_query($link,$sql_q);
+/*$sql_q = "INSERT INTO `securite`(`email`,`question`, `reponse`) VALUES('$email', '$question', '$reponse')";
+$req_e = mysqli_query($link,$sql_q);*/
 
 $inscription=mysqli_query($link,$sql);
 

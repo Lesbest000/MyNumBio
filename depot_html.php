@@ -7,7 +7,7 @@
 	</head>
 	<body>
 		<?php include("../includes/headerR.php")?>
-		<?php include("../includes/Nav_matieres_CNB1.php")?>
+		<?php include("../includes/Nav_matieres_$fl_classe.php")?>
 		<?php echo"<h2 style='text-align:center;color:white;font-weight:bolder'>$fl_type $fl_matiere $fl_annee</h2><br>"?>
 		<div>
 		<?php echo"<div><a href=\"javascript:history.go(-1)\" style='color:white'>Page précedente</a><br><br></div>"?>
@@ -45,9 +45,11 @@
 						
 						echo "<script type='text/javascript'>alert('Êtes-vous sûr de vouloir le supprimer?');
 						window.location.assign('$nom_php')</script>";	
+						
 						if($result_sup==false){
 							echo "<script type='text/javascript'>alert('Erreur de suppression')</script>";
-						}	
+							header("$nom_php'.php'");
+						}
 					}else{
 						echo "<script type='text/javascript'>alert('Vous ne pouvez pas supprimer ce document')</script>";
 					}		

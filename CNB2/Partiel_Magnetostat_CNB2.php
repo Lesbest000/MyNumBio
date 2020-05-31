@@ -17,7 +17,7 @@ session_start();
         
         <h1 class="titre">Partiel de Magnétostatique</h1>
         <div class="contener_années">
-            <div class="bloc_année"><a href="partiel_magnetostat_2019-2020.php">2019-2020</a></div>
+            <div class="bloc_année"><a href="partiel_magnetostat_CNB2_2019-2020.php">2019-2020</a></div>
         </div>
 
         

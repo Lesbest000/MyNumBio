@@ -16,7 +16,7 @@ session_start();
         <?php include("../includes/Nav_matieres_CNB2.php")?>
         <h1 class="titre">DS de Science du sol CNB2</h1>
         <div class="contener_années">
-            <div class="bloc_année"><a href="DS_sol_2019-2020.php">2019-2020</a></div>
+            <div class="bloc_année"><a href="DS_sol_CNB2_2019-2020.php">2019-2020</a></div>
         </div>
 
 

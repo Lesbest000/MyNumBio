@@ -17,7 +17,7 @@ session_start();
 
         <h1 class="titre">Quizz de Magnétostatique CNB2</h1>
         <div class="contener_années">
-            <div class="bloc_année"><a href="quizz_magnetostat_2019-2020.php">2019-2020</a></div>
+            <div class="bloc_année"><a href="quizz_magnetostat_CNB2_2019-2020.php">2019-2020</a></div>
         </div>
 
         </body>
