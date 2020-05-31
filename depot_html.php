@@ -77,7 +77,7 @@
 				<p>Veuillez ne pas mettre d'espaces dans le nom du fichier</p>
 				</div>
 				<div>
-				<p style="font-weight:bold">"date_Matiere_NOM.pdf" (040520_Optique_DUPONT.pdf)</p>
+				<p style="font-weight:bold">"date_Epreuve_Matiere.pdf" (040520_Quiz_Optique.pdf)</p>
 				</div>
 				</div>
 			
