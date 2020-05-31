@@ -17,8 +17,8 @@ session_start();
 
         <h1 class="titre">Quizz de Mécanique</h1>
         <div class="contener_années">
-            <div class="bloc_année"><a href="quizz_mecanique_2018-2019.php">2018-2019</a></div>
-            <div class="bloc_année"><a href="quizz_mecanique_2019-2020.php">2019-2020</a></div>
+            <div class="bloc_année"><a href="quizz_mecanique_CNB1_2018-2019.php">2018-2019</a></div>
+            <div class="bloc_année"><a href="quizz_mecanique_CNB1_2019-2020.php">2019-2020</a></div>
         </div>
 
         

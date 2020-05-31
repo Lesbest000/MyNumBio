@@ -54,14 +54,14 @@ if(isset($_POST['submit'])){
 <p style="text-align:center">Votre nouveau mot de passe</p>
             </div>
 
-            <form action="server_mdp.php" method="POST" id="" class="">
+            <form action="server_mdp.php" method="POST" id="connexion" class="input-group">
             <input type="email" id="email" name="email" class="input-field" placeholder="Adresse mail" pattern="[A-Za-z0-9]{1,20}[.][A-Za-z0-9]{1,20}@student.yncrea.fr" title="Type d'adresse mail à fournir : prénom.nom@student.yncrea.fr" required>
             
-            <button type="suivant" name="suivant" class="submit-btn">Afficher la question de sécurité</button><br>
+            <button type="suivant" name="suivant" class="submit-btn">Suivant</button><br>
 <p>&thinsp;</p>
             </form>
             
-            
+            <!--
             <form action="server_mdp.php" method="POST" id="connexion" class="input-group">
 <p>&thinsp;</p>
             <div type="text" id="question" name="question">
@@ -86,7 +86,7 @@ if(isset($_POST['submit'])){
             <input type="password" id="password" name="password_1" class="input-field" placeholder="Nouveau mot de passe" required>
             <input type="password" id="password" name="password_2"class="input-field" placeholder="Confirmer le mot de passe" required>
             
-            <button type="submit" name="submit" class="submit-btn">Enregistrer</button><br>
+            <button type="submit" name="submit" class="submit-btn">Enregistrer</button><br>-->
 <a href="Connexion.php">Se connecter</a>
             </form>
 

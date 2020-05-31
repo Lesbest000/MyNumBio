@@ -16,8 +16,8 @@ session_start();
         <?php include("../includes/Nav_matieres_CNB1.php")?>
         <h1 class="titre">DS de Mathématiques</h1>
         <div class="contener_années">
-            <div class="bloc_année"><a href="DS_mathematiques_2018-2019.php">2018-2019</a></div>
-            <div class="bloc_année"><a href="DS_mathematiques_2019-2020.php">2019-2020</a></div>
+            <div class="bloc_année"><a href="DS_mathematiques_CNB1_2018-2019.php">2018-2019</a></div>
+            <div class="bloc_année"><a href="DS_mathematiques_CNB1_2019-2020.php">2019-2020</a></div>
         </div>
 
 

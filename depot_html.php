@@ -43,7 +43,8 @@
 						unlink($chemin);					
 						$result_sup =mysqli_query($link,"DELETE FROM $db_table_s WHERE file='$did'");
 						
-						echo "<script type='text/javascript'>alert('Êtes-vous sûr de vouloir le supprimer?')</script>";	
+						echo "<script type='text/javascript'>alert('Êtes-vous sûr de vouloir le supprimer?');
+						window.location.assign('$nom_php')</script>";	
 						if($result_sup==false){
 							echo "<script type='text/javascript'>alert('Erreur de suppression')</script>";
 						}	
@@ -115,8 +116,9 @@
 						unlink($chemin);					
 						$result_sup =mysqli_query($link,"DELETE FROM $db_table_c WHERE file='$did'");
 						
-						echo "<script type='text/javascript'>alert('Êtes-vous sûr de vouloir le supprimer?');self.location</script>";
-					
+						echo "<script type='text/javascript'>alert('Êtes-vous sûr de vouloir le supprimer?');
+						window.location.assign('$nom_php')</script>";	
+						
 						if($result_sup==false){
 							echo "<script type='text/javascript'>alert('Erreur de suppression')</script>";
 							header("$fl_type'_'$fl_matiere'_'$fl_annee'.php'");

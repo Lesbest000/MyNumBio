@@ -16,8 +16,8 @@ session_start();
         <?php include("../includes/Nav_matieres_CNB1.php")?>
         <h1 class="titre">Partiel de Mécanique</h1>
         <div class="contener_années">
-            <div class="bloc_année"><a href="partiel_mecanique_2018-2019.php">2018-2019</a></div>
-            <div class="bloc_année"><a href="partiel_mecanique_2019-2020.php">2019-2020</a></div>
+            <div class="bloc_année"><a href="partiel_mecanique_CNB1_2018-2019.php">2018-2019</a></div>
+            <div class="bloc_année"><a href="partiel_mecanique_CNB1_2019-2020.php">2019-2020</a></div>
         </div>
 
         </body>

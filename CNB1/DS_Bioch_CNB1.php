@@ -19,8 +19,8 @@ session_start();
         <h1 class="titre">DS de Biochimie</h1>
 
         <div class="contener_années">
-            <div class="bloc_année"><a href="DS_bioch_2018-2019.php">2018-2019</a></div>
-            <div class="bloc_année"><a href="DS_bioch_2019-2020.php">2019-2020</a></div>
+            <div class="bloc_année"><a href="DS_bioch_CNB1_2018-2019.php">2018-2019</a></div>
+            <div class="bloc_année"><a href="DS_bioch_CNB1_2019-2020.php">2019-2020</a></div>
         </div>
 
 

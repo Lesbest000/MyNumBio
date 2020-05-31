@@ -18,8 +18,8 @@ session_start();
 
         <h1 class="titre">Partiel d'Optique</h1>
         <div class="contener_années">
-            <div class="bloc_année"><a href="partiel_optique_2018-2019.php">2018-2019</a></div>
-            <div class="bloc_année"><a href="partiel_optique_2019-2020.php">2019-2020</a></div>
+            <div class="bloc_année"><a href="partiel_optique_CNB1_2018-2019.php">2018-2019</a></div>
+            <div class="bloc_année"><a href="partiel_optique_CNB1_2019-2020.php">2019-2020</a></div>
         </div>
 
         </body>

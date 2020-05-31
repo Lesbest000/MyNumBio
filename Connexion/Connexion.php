@@ -28,7 +28,7 @@
                     <input type="email" id="email" name="email" class="input-field" placeholder="Adresse mail" pattern="[A-Za-z0-9]{1,20}[.][A-Za-z0-9]{1,20}@student.yncrea.fr" title="Type d'adresse mail à fournir : prénom.nom@student.yncrea.fr" required>
                     <input type="password" id="password" name="password_1" class="input-field" placeholder="Mot de passe" required>
                     <input type="password" id="password" name="password_2" class="input-field" placeholder="Confirmer le mot de passe" required>
-                    
+                    <!--
                     <select name="question" style="width:300px">
 	            <option value="">-- Veuillez choisir votre question de sécurité --</option>
 	            <option value="Quel est le nom de votre premier animal de compagnie ?">Quel est le nom de votre premier animal de compagnie ?</option>
@@ -38,7 +38,7 @@
                 <option value=">Quel est votre date d'anniversaire ?">Quel est votre date d'anniversaire ?</option>
 
 	          </select>
-                <input type="reponse" id="reponse" name="reponse" class="input-field" placeholder="Réponse à la question" required>
+                <input type="reponse" id="reponse" name="reponse" class="input-field" placeholder="Réponse à la question" required>-->
                     <p>&thinsp;</p>
                     <button type="submit" name="submit" class="submit-btn">S'inscrire</button>
             </form>
