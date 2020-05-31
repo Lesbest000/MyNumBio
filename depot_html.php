@@ -8,7 +8,7 @@
 	<body>
 		<?php include("../includes/headerR.php")?>
 		<?php include("../includes/Nav_matieres_$fl_classe.php")?>
-		<?php echo"<h2 style='text-align:center;color:white;font-weight:bolder'>$fl_type $fl_matiere $fl_annee</h2><br>"?>
+		<?php echo"<h1 classe='titre' style='text-align:center;color:white;font-weight:bolder'>$fl_type $fl_matiere $fl_annee</h1><br>"?>
 		<div>
 		<?php echo"<div><a href=\"javascript:history.go(-1)\" style='color:white'>Page précedente</a><br><br></div>"?>
 		<div id="depot_page">
