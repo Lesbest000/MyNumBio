@@ -1,6 +1,6 @@
 <?php
 
-echo "<script> location='Connexion/Connexion.php'</script>";
+//echo "<script> location='Connexion/Connexion.php'</script>";
 
 
 ?>
