@@ -25,6 +25,7 @@
 							echo"<br><form method='POST'>
 							<input type=hidden name=file value=".$row['file'].">
 							<input type=hidden name=id value=".$row['author'].">
+							<p>&thinsp;</p>
 							<input type=submit value=Supprimer name=supprimer_s >
 							</form>";
 							echo "</div>";
@@ -100,6 +101,7 @@
 						echo"<br><form method='POST'>
 						<input type=hidden name=file value=".$row['file'].">
 						<input type=hidden name=id value=".$row['author'].">
+						<p>&thinsp;</p>
 						<input type=submit value=Supprimer name=supprimer_c >
 						</form>";   
 						echo "</div>";

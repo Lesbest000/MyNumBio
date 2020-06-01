@@ -1,7 +1,7 @@
 <?php
 // Initialisation de la variable
   $msg = "";
-
+  $_SESSION['id']=$id;
 // Si click sur depot sujet////////////////////////////
 if (isset($_POST['upload_s'])) {
 		$matiere=$fl_matiere;
