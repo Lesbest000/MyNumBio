@@ -8,6 +8,7 @@
 	<body>
 		<?php include("../includes/headerR.php")?>
 		<?php include("../includes/Nav_matieres_$fl_classe.php")?>
+		<?php include("includes/admin.php")?>
 		<?php echo"<h1 classe='titre' style='text-align:center;color:white;font-weight:bolder'>$fl_type $fl_matiere $fl_annee $fl_classe</h1><br>"?>
 		<div>
 		<?php echo"<div><a href=\"javascript:history.go(-1)\" style='color:white'>Page précedente</a><br><br></div>"?>
@@ -37,7 +38,7 @@
 					// supprimer doc
 					if( isset( $_POST['supprimer_s'] ) ) {
 						$file_id=$_POST['id'];
-						if($id==$file_id){
+						if($id==$file_id  or true === in_array($_SESSION['email'], $admin_email)){
 						
 						$did = $_POST['file'];	
 						$chemin="../$fl_fichier/$fl_classe/$fl_matiere/$fl_type/$fl_annee/$did";
@@ -113,7 +114,7 @@
 					// supprimer doc
 					if( isset( $_POST['supprimer_c'] ) ) {
 						$file_id=$_POST['id'];
-						if($id==$file_id){
+						if($id==$file_id or true === in_array($_SESSION['email'], $admin_email)){
 						
 						$did = $_POST['file'];	
 						$chemin="../$fl_fichier/$fl_classe/$fl_matiere/$fl_type/$fl_annee/$did";

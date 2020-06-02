@@ -54,10 +54,9 @@ if (isset($_POST['upload_c'])) {
   	// Chemin fichier
     $target = "../$fl_fichier/$fl_classe/$fl_matiere/$fl_type/$fl_annee/".basename($file);
 
-
     
   	if (move_uploaded_file($_FILES['file']['tmp_name'], $target)) {
-    	$sql = "INSERT INTO $db_table_c (file, file_text, path,author,email,time,type,matiere,classe,annee) VALUES ('$file', '$file_text','$target','$id','$email','$timestamp','$fl_type','$fl_matiere','$fl_classe','$fl_annee')";
+		$sql = "INSERT INTO $db_table_c (file, file_text, path,author,email,time,type,matiere,classe,annee) VALUES ('$file', '$file_text','$target','$id','$email','$timestamp','$fl_type','$fl_matiere','$fl_classe','$fl_annee')";
   	// Requete
 		mysqli_query($link, $sql);
 		$msg= "Votre document a été déposé.";

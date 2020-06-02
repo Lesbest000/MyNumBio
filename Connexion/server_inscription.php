@@ -39,7 +39,7 @@ $_SESSION['prenom'] =$prenom;
 
 //Connexion a la bdd/////////////////////////////////////////////////////////
 
-$db_table="utilisateur";
+$db_table="users";
 include("../bdd.php");
 ////////////////////////////////////////////////////////////////////////////
 $link = mysqli_connect ($db_host,$db_user,$db_pass,$db_name);
