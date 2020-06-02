@@ -17,6 +17,7 @@ session_start();
         <p>&nbsp;</p>
         <h1 class="titre">Bonjour et bienvenue aux CNB!</h1><br>
         <p>&nbsp;</p>
+        <div class="image-accueil">
         <marquee align="center" height="300" scrollamount="10">
         <p>
         <img border="0" src="img/isen.jpg" width="550" height="300" alt="erreur d'image" hspace="0">
