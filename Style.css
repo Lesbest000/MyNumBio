@@ -10,7 +10,8 @@ body{
 .menu-bar{
     background: rgb(92, 92, 238);
     text-align:center;
-    
+    position: relative;
+    z-index: 2;
 }
 .menu-bar ul {
     display: flex;
@@ -67,6 +68,11 @@ body{
 .titre{
 color:white;
 text-shadow: 2px 2px 3px black;
+}
+
+.image-accueil{
+    position: relative;
+    z-index: 1;
 }
 
 h1{
